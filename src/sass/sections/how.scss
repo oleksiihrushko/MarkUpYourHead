@@ -1,3 +1,73 @@
 .how {
   padding: 202px 0 0 0;
+  text-align: center;
+
+  &__title {
+    @include font(20px, 33px, 800);
+
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+  }
+
+  &__list {
+    margin: 0 auto;
+    width: 290px;
+  }
+
+  &__item {
+    box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
+    height: 267px;
+    margin-bottom: 16px;
+    padding: 30px 22px 0;
+
+    svg {
+      fill: $accent-color;
+      width: 44px;
+      height: 45px;
+    }
+
+    &--title {
+      @include font(13px, 20px, 700);
+
+      letter-spacing: 0.65px;
+      margin-bottom: 16px;
+
+      &::after {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $accent-color;
+        content: '';
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+
+    &--description {
+      @include font(11px, 20px, 400);
+
+      letter-spacing: 0.55px;
+      color: $third-text-color;
+    }
+
+    &:hover {
+      background-color: $accent-color;
+
+      svg {
+        fill: $secondary-text-color;
+      }
+
+      .how__item--title {
+        color: $secondary-text-color;
+
+        &::after {
+          background-color: $secondary-text-color;
+        }
+      }
+
+      .how__item--description {
+        color: $secondary-text-color;
+      }
+    }
+  }
 }

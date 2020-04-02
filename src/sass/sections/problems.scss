@@ -17,16 +17,21 @@
     }
   }
 
+  .list-wrapper {
+    position: relative;
+  }
+
   &__list {
     position: absolute;
-    top: 300px;
-    padding: 16px 0 32px;
+    top: 210px;
+    width: 100%;
+    padding: 15px 30px 32px;
+    background-color: $secondary-text-color;
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
   }
 
   &__item {
-    margin: 0 auto;
-    max-width: 220px;
+    margin: 0 auto 12px;
     font-weight: 700;
 
     &--number {
