@@ -1,0 +1,58 @@
+.problems {
+  background-color: $main-bgrnd-color;
+
+  &__title {
+    @include font(20px, 30px, 800);
+
+    color: $secondary-text-color;
+    letter-spacing: 1px;
+    padding: 50px 20px 325px 0;
+
+    .br {
+      display: block;
+    }
+
+    .orange {
+      color: $accent-color;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 300px;
+    padding: 16px 0 32px;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+  }
+
+  &__item {
+    margin: 0 auto;
+    max-width: 220px;
+    font-weight: 700;
+
+    &--number {
+      @include font(14px, 29px);
+
+      position: relative;
+      padding-left: 35px;
+      letter-spacing: 0.7px;
+      color: $accent-color;
+
+      &::before {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $accent-color;
+        content: '';
+      }
+    }
+
+    &--problem {
+      @include font(13px, 20px);
+
+      letter-spacing: 0.65px;
+    }
+  }
+}
