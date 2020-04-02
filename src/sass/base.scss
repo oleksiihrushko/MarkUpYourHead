@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  font-family: $main-font;
+  color: $main-text-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  min-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    min-width: 688px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 1210px;
+  }
+
+  @media (min-width: 1700px) {
+    min-width: 1680px;
+  }
+}
