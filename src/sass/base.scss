@@ -40,18 +40,18 @@ img {
 }
 
 .container {
-  min-width: 280px;
+  width: 280px;
   margin: 0 auto;
 
   @media (min-width: 768px) {
-    min-width: 688px;
+    width: 688px;
   }
 
   @media (min-width: 1440px) {
-    min-width: 1210px;
+    width: 1210px;
   }
 
   @media (min-width: 1700px) {
-    min-width: 1680px;
+    width: 1680px;
   }
 }
