@@ -5,12 +5,30 @@
 .teacher_card--title{
     @include font(20px,30px,900);
     margin-bottom: 30px;
+    background-color: #fefefe;
+}
+
+.teacher_card_photo{
+    width: 100%;
+    height: 216px;
+    overflow: hidden; 
+}
+
+.teacher_info--name{
+    @include font(16px,30px,900);
+    background-color: #fefefe;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .teacher_info--name::after{
     content: '';
     display: block;
-    background-color: rgb(133, 133, 133);
+    position: relative;
+    background-color: $third-text-color;
     width: 100%;
     height: 1px; 
 }
+
+
+
