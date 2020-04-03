@@ -166,7 +166,8 @@
       letter-spacing: 0.65px;
 
       @media (min-width: 1280px) {
-        @include font(18px, 29px) letter-spacing: 0.9px;
+        @include font(18px, 29px);
+        letter-spacing: 0.9px;
       }
 
       @media (min-width: 1280px) {
