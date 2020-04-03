@@ -33,7 +33,7 @@
         display: block;
         content: '';
         position: absolute;
-        background-image: url(../images/icons/fire.pnggit);
+        background-image: url(../images/icons/fire.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -94,6 +94,11 @@
         &_list--subtext{
             display: block;
         }
+
+        &_list--box::before{
+            width: 26px;
+            height: 26px;
+        }
     }
 
 }
@@ -119,6 +124,11 @@
 
         &_list--subtext{
             display: block;
+        }
+
+        &_list--box::before{
+            width: 32px;
+            height: 32px;
         }
     }
 
