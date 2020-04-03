@@ -1,0 +1,125 @@
+.guarantee--title{
+    text-align: center;    
+    @include font(20px, 62px, 900);
+    font-family: $main-font;
+}
+
+.guarantee_info{
+    background-color: $secondary-bgrnd-color;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &_list--item{
+        border-width: 1px;
+        border-color: $accent-color;
+        border-style: none;
+        border-left-style: dotted;
+        padding-left: 26px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    &_list--item:last-of-type{
+        border-style: none;
+        padding-bottom: 0;
+    }
+
+    &_list--marked::after{
+        content: '*';
+        color: $accent-color;
+    }
+
+    &_list--box::before{
+        display: block;
+        content: '';
+        position: absolute;
+        background-image: url(../images/icons/fire.pnggit);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: $secondary-bgrnd-color;
+        left: 0;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    &_list--text{
+        @include font(12px, 22px, 600);
+        font-family: $main-font;
+    }
+
+    &_list--subtext{
+        color: $accent-color;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .guarantee--title{   
+        @include font(26px, 62px, 900);
+    }
+    
+    .guarantee_info{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    
+
+        &_list--box::before{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .guarantee--title{   
+        @include font(42px, 62px, 900);
+        margin-bottom: 26px;
+    }
+
+    .guarantee_info{
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &_list--text{
+            @include font(18px, 30px, 600);
+            font-family: $main-font;
+        }
+
+        &_list--marked{
+            display: block;
+        }
+
+        &_list--subtext{
+            display: block;
+        }
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .guarantee--title{   
+        @include font(46px, 62px, 900);
+        margin-bottom: 26px;
+    }
+
+    .guarantee_info{
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &_list--text{
+            @include font(22px, 30px, 600);
+            font-family: $main-font;
+        }
+
+        &_list--marked{
+            display: block;
+        }
+
+        &_list--subtext{
+            display: block;
+        }
+    }
+
+}
