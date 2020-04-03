@@ -1,29 +1,116 @@
 .how {
-  padding: 202px 0 0 0;
+  padding: 202px 0 54px 0;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 232px 0 50px 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 166px 0 100px 0;
+  }
+
+  @media (min-width: 1680px) {
+    padding: 304px 0 128px 0;
+  }
 
   &__title {
     @include font(20px, 33px, 800);
 
     letter-spacing: 1px;
     margin-bottom: 36px;
+
+    @media (min-width: 768px) {
+      @include font(26px, 33px, 800);
+
+      letter-spacing: 1.3px;
+    }
+
+    @media (min-width: 1280px) {
+      @include font(42px, 62px, 800);
+
+      letter-spacing: 1.3px;
+      text-align: left;
+      margin-bottom: 45px;
+    }
   }
 
   &__list {
     margin: 0 auto;
-    width: 290px;
+    width: 292px;
+
+    @media (max-width: 767px) {
+      margin-left: -5px;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 604px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 100%;
+    }
   }
 
   &__item {
     box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
-    height: 267px;
-    margin-bottom: 16px;
+    width: 100%;
     padding: 30px 22px 0;
+
+    @media (max-width: 767px) {
+      height: 267px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 292px;
+      margin-bottom: 0;
+      padding-bottom: 24px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      &:nth-last-child(n + 3) {
+        margin-bottom: 22px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      width: 390px;
+      margin-bottom: 0;
+      padding: 40px 50px 28px;
+
+      &:nth-last-child(n + 4) {
+        margin-bottom: 22px;
+      }
+    }
+
+    @media (min-width: 1680px) {
+      padding: 43px 56px 56px;
+      width: 430px;
+    }
 
     svg {
       fill: $accent-color;
-      width: 44px;
+      width: 45px;
       height: 45px;
+
+      @media (min-width: 1280px) {
+        margin-bottom: 14px;
+        width: 50px;
+        height: 49px;
+      }
+
+      @media (min-width: 1680px) {
+        margin-bottom: 14px;
+        width: 55px;
+        height: 54px;
+      }
     }
 
     &--title {
@@ -31,6 +118,18 @@
 
       letter-spacing: 0.65px;
       margin-bottom: 16px;
+
+      @media (min-width: 1280px) {
+        @include font(18px, 29px, 700);
+
+        letter-spacing: 0.9px;
+      }
+
+      @media (min-width: 1680px) {
+        @include font(21px, 29px, 700);
+
+        letter-spacing: 1.05px;
+      }
 
       &::after {
         display: block;
@@ -48,6 +147,18 @@
 
       letter-spacing: 0.55px;
       color: $third-text-color;
+
+      @media (min-width: 1280px) {
+        @include font(15px, 31px, 400);
+
+        letter-spacing: 0.65px;
+      }
+
+      @media (min-width: 1680px) {
+        @include font(19px, 31px, 400);
+
+        letter-spacing: 0.95px;
+      }
     }
 
     &:hover {
