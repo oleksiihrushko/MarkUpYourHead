@@ -30,5 +30,20 @@
     height: 1px; 
 }
 
+.teacher_info_list--topic{
+    margin-bottom: 20px;
+}
+
+.teacher_info_list--text::before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    background-image: url(../images/icons/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 
 
