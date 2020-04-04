@@ -1,0 +1,267 @@
+/* section registration */
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.registration {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgb(17, 21, 23);
+  background-image: url("/images/registration_bgrnd_mobile.png");
+  background-repeat: no-repeat;
+  width: 100%;
+
+  &__text {
+    @include font(14px, 26px, 800);
+    letter-spacing: 0, 7;
+    font-style: normal;
+    color: $secondary-text-color;
+    text-align: center;
+    padding: 0 22px 22px;
+  }
+}
+
+.orange-text {
+  color: $accent-color;
+}
+
+.small {
+  @include font(11px, 20px, 600);
+  letter-spacing: 0, 55;
+  padding: 0 13px 28px;
+}
+
+.form-wrapper {
+  text-align: center;
+}
+
+.registration__form-input {
+  border-width: 1px;
+  color: $secondary-text-color;
+  border-style: solid;
+  width: 278px;
+  height: 48px;
+  background: none;
+}
+
+input:not([type="submit"]) {
+  padding: 22px;
+  color: $secondary-text-color;
+}
+
+.tell {
+  margin-top: 20px;
+  margin-bottom: 56px;
+}
+
+input::placeholder {
+  text-transform: capitalize;
+  color: $secondary-text-color;
+  @include font(13px, 37px, 600);
+  letter-spacing: 0, 65;
+}
+
+.registration__form-input:focus {
+  outline-offset: -1px;
+}
+
+.registration__form-input:required:focus:valid:not(:placeholder-shown) {
+  outline: 1px solid green;
+}
+
+.registration__form-input:required:focus:invalid:not(:placeholder-shown) {
+  outline: 1px solid red;
+}
+
+.registration__form-btn {
+  border-width: 2px;
+  border-color: rgb(255, 107, 8);
+  border-style: solid;
+  background-color: rgb(255, 107, 8);
+  width: 246px;
+  height: 44px;
+  text-transform: uppercase;
+  @include font(11px, 42px, 700);
+  letter-spacing: 1, 43;
+  font-family: $main-font;
+  cursor: pointer;
+  color: $secondary-text-color;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  .registration {
+    padding-top: 61px;
+    padding-bottom: 60px;
+    background-color: rgb(17, 21, 23);
+    background-image: url("/images/registration_bgrnd_tablet.png");
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &__text {
+      @include font(22px, 38px, 800);
+      letter-spacing: 1, 1;
+      font-style: normal;
+      color: $secondary-text-color;
+      text-align: center;
+      padding: 0 71px 32px;
+    }
+  }
+
+  .small {
+    @include font(15px, 20px, 600);
+    letter-spacing: 0, 75;
+    padding: 0 104px 42px;
+  }
+
+  .registration__form-input {
+    border-width: 1px;
+    color: $secondary-text-color;
+    border-style: solid;
+    width: 398px;
+    height: 48px;
+    background: none;
+  }
+
+  .tell {
+    margin-top: 20px;
+    margin-bottom: 56px;
+  }
+
+  .registration__form-btn {
+    border-width: 2px;
+    border-color: rgb(255, 107, 8);
+    border-style: solid;
+    background-color: rgb(255, 107, 8);
+    width: 246px;
+    height: 44px;
+    text-transform: uppercase;
+    @include font(11px, 42px, 700);
+    letter-spacing: 1, 43;
+    font-family: $main-font;
+    cursor: pointer;
+    color: $secondary-text-color;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1210px;
+    margin: 0 auto;
+  }
+
+  .registration {
+    padding-top: 86px;
+    padding-bottom: 60px;
+    background-color: rgb(17, 21, 23);
+    background-image: url("/images/registration_bgrnd_desktop_1280.png");
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &__text {
+      @include font(37px, 50px, 800);
+      letter-spacing: 1, 87;
+      font-style: normal;
+      color: $secondary-text-color;
+      text-align: center;
+      padding: 0 141px 51px;
+    }
+  }
+
+  .small {
+    @include font(18px, 24px, 600);
+    letter-spacing: 0, 9;
+    padding: 0 333px 53px;
+  }
+
+  .registration__form-input {
+    border-width: 1px;
+    color: $secondary-text-color;
+    border-style: solid;
+    width: 618px;
+    height: 70px;
+    background: none;
+  }
+
+  .tell {
+    margin-top: 32px;
+    margin-bottom: 59px;
+  }
+
+  input::placeholder {
+    text-transform: capitalize;
+    color: $secondary-text-color;
+    @include font(20px, 37px, 600);
+    letter-spacing: 1, 04;
+  }
+
+  .registration__form-btn {
+    border-width: 2px;
+    border-color: rgb(255, 107, 8);
+    border-style: solid;
+    background-color: rgb(255, 107, 8);
+    width: 350px;
+    height: 68px;
+    text-transform: uppercase;
+    @include font(14px, 42px, 700);
+    letter-spacing: 2, 8;
+    font-family: $main-font;
+    cursor: pointer;
+    color: $secondary-text-color;
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    width: 1340px;
+    margin: 0 auto;
+  }
+
+  .registration {
+    padding-top: 134px;
+    padding-bottom: 60px;
+    background-color: rgb(17, 21, 23);
+    background-image: url("/images/registration_bgrnd_desktop_1680.png");
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &__text {
+      @include font(37px, 50px, 800);
+      letter-spacing: 1, 87;
+      font-style: normal;
+      color: $secondary-text-color;
+      text-align: center;
+      padding: 0 176px 75px;
+    }
+  }
+
+  .small {
+    @include font(18px, 24px, 600);
+    letter-spacing: 0, 9;
+    padding: 0 333px 53px;
+  }
+
+  .registration__form-input {
+    border-width: 1px;
+    color: $secondary-text-color;
+    border-style: solid;
+    width: 618px;
+    height: 70px;
+    background: none;
+  }
+
+  .form-wrapper input {
+    display: block;
+    margin: 28px auto;
+  }
+
+  .registration__form-btn {
+    margin-top: 57px;
+  }
+}
