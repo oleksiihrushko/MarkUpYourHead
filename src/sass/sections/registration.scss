@@ -1,21 +1,17 @@
 /* section registration */
 
-.container {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .registration {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: rgb(17, 21, 23);
   background-image: url("/images/registration_bgrnd_mobile.png");
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
 
   &__text {
     @include font(14px, 26px, 800);
-    letter-spacing: 0, 7;
+    letter-spacing: 0.7px;
     font-style: normal;
     color: $secondary-text-color;
     text-align: center;
@@ -29,7 +25,7 @@
 
 .small {
   @include font(11px, 20px, 600);
-  letter-spacing: 0, 55;
+  letter-spacing: 0.55px;
   padding: 0 13px 28px;
 }
 
@@ -60,7 +56,7 @@ input::placeholder {
   text-transform: capitalize;
   color: $secondary-text-color;
   @include font(13px, 37px, 600);
-  letter-spacing: 0, 65;
+  letter-spacing: 0.65px;
 }
 
 .registration__form-input:focus {
@@ -77,56 +73,41 @@ input::placeholder {
 
 .registration__form-btn {
   border-width: 2px;
-  border-color: rgb(255, 107, 8);
+  border-color: $accent-color;
   border-style: solid;
-  background-color: rgb(255, 107, 8);
+  background-color: $accent-color;
   width: 246px;
   height: 44px;
   text-transform: uppercase;
   @include font(11px, 42px, 700);
-  letter-spacing: 1, 43;
+  letter-spacing: 0.9px;
   font-family: $main-font;
   cursor: pointer;
   color: $secondary-text-color;
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 688px;
-    margin: 0 auto;
-  }
-
+  
   .registration {
     padding-top: 61px;
-    padding-bottom: 60px;
-    background-color: rgb(17, 21, 23);
     background-image: url("/images/registration_bgrnd_tablet.png");
-    background-repeat: no-repeat;
-    width: 100%;
 
     &__text {
       @include font(22px, 38px, 800);
-      letter-spacing: 1, 1;
-      font-style: normal;
-      color: $secondary-text-color;
-      text-align: center;
+      letter-spacing: 1.1px;
       padding: 0 71px 32px;
     }
   }
 
   .small {
     @include font(15px, 20px, 600);
-    letter-spacing: 0, 75;
+    letter-spacing: 0.75px;
     padding: 0 104px 42px;
   }
 
   .registration__form-input {
-    border-width: 1px;
-    color: $secondary-text-color;
-    border-style: solid;
     width: 398px;
     height: 48px;
-    background: none;
   }
 
   .tell {
@@ -135,58 +116,35 @@ input::placeholder {
   }
 
   .registration__form-btn {
-    border-width: 2px;
-    border-color: rgb(255, 107, 8);
-    border-style: solid;
-    background-color: rgb(255, 107, 8);
     width: 246px;
     height: 44px;
-    text-transform: uppercase;
     @include font(11px, 42px, 700);
-    letter-spacing: 1, 43;
-    font-family: $main-font;
-    cursor: pointer;
-    color: $secondary-text-color;
+    letter-spacing: 1.43px;
   }
 }
 
 @media (min-width: 1280px) {
-  .container {
-    width: 1210px;
-    margin: 0 auto;
-  }
-
+  
   .registration {
     padding-top: 86px;
-    padding-bottom: 60px;
-    background-color: rgb(17, 21, 23);
     background-image: url("/images/registration_bgrnd_desktop_1280.png");
-    background-repeat: no-repeat;
-    width: 100%;
 
     &__text {
       @include font(37px, 50px, 800);
-      letter-spacing: 1, 87;
-      font-style: normal;
-      color: $secondary-text-color;
-      text-align: center;
+      letter-spacing: 1.87px;
       padding: 0 141px 51px;
     }
   }
 
   .small {
     @include font(18px, 24px, 600);
-    letter-spacing: 0, 9;
+    letter-spacing: 0.9px;
     padding: 0 333px 53px;
   }
 
   .registration__form-input {
-    border-width: 1px;
-    color: $secondary-text-color;
-    border-style: solid;
     width: 618px;
     height: 70px;
-    background: none;
   }
 
   .tell {
@@ -195,65 +153,40 @@ input::placeholder {
   }
 
   input::placeholder {
-    text-transform: capitalize;
-    color: $secondary-text-color;
     @include font(20px, 37px, 600);
-    letter-spacing: 1, 04;
+    letter-spacing: 1.04px;
   }
 
   .registration__form-btn {
-    border-width: 2px;
-    border-color: rgb(255, 107, 8);
-    border-style: solid;
-    background-color: rgb(255, 107, 8);
     width: 350px;
     height: 68px;
-    text-transform: uppercase;
     @include font(14px, 42px, 700);
-    letter-spacing: 2, 8;
-    font-family: $main-font;
-    cursor: pointer;
-    color: $secondary-text-color;
+    letter-spacing: 2.8px;
   }
 }
 
 @media (min-width: 1680px) {
-  .container {
-    width: 1340px;
-    margin: 0 auto;
-  }
-
-  .registration {
+  
+    .registration {
     padding-top: 134px;
-    padding-bottom: 60px;
-    background-color: rgb(17, 21, 23);
     background-image: url("/images/registration_bgrnd_desktop_1680.png");
-    background-repeat: no-repeat;
-    width: 100%;
 
     &__text {
       @include font(37px, 50px, 800);
-      letter-spacing: 1, 87;
-      font-style: normal;
-      color: $secondary-text-color;
-      text-align: center;
+      letter-spacing: 1.87px;
       padding: 0 176px 75px;
     }
   }
 
   .small {
-    @include font(18px, 24px, 600);
-    letter-spacing: 0, 9;
-    padding: 0 333px 53px;
+    @include font(25px, 37px, 600);
+    letter-spacing: 1.25px;
+    padding: 0 258px 53px;
   }
 
   .registration__form-input {
-    border-width: 1px;
-    color: $secondary-text-color;
-    border-style: solid;
     width: 618px;
     height: 70px;
-    background: none;
   }
 
   .form-wrapper input {
