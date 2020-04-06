@@ -1,0 +1,308 @@
+.position {
+    position: relative;
+}
+
+.new-line {
+    display: block;
+}
+
+.visually-hidden {
+    opacity: 0;
+}
+
+.programm-bg {
+    background-color: $main-bgrnd-color;
+    background-image: url(../../images/bgi_programm.png);
+    background-position-x: right;
+    background-position-y: 1520px;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        background-image: url(../../images/bgi_programm_tablet.jpg);
+        background-position-y: 840px;
+    }
+
+    @media (min-width: 1280px) {
+        background-image: url(../../images/bgi_programm_desctop.jpg);
+        background-position-y: 480px;
+        background-position-x: left;
+    }
+}
+
+.line {
+    position: absolute;
+    top: 124px;
+    left: calc(50% - 78px);
+    width: 2px;
+    height: 1324px;
+    background-color: #546264;
+    overflow: hidden;
+    
+    @media (min-width: 768px) {
+        left: calc(50% - 232px);
+        top: 162px;
+        height: 742px;
+    }
+
+    @media (min-width: 1280px) {
+        left: 0;
+        top: 160px;
+        height: 2px;
+        width: 100%;
+    }
+}
+
+.programm {
+    padding-bottom: 412px;
+    margin-bottom: 245px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 356px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-bottom: 497px;
+        margin-bottom: 92px;
+    }
+
+    &__title {
+        color: $secondary-text-color;
+        font-family: $main-font;
+        @include font(20px ,32px ,800);
+        padding-top: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            line-height: 62px;
+            font-size: 26px;
+            text-align: left;
+            margin-bottom: 36px;
+        }
+
+        @media (min-width: 1280px) {
+            font-size: 42px;
+            margin-bottom: 84px;
+        }
+    }
+
+    &__semester-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 94px;;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            padding-left: 144px;
+        }
+
+        @media (min-width: 1280px) {
+            padding-left: 0;
+        }
+
+        &-item {
+            display: flex;
+            flex-basis: 280px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+
+            @media (min-width: 768px) {
+                flex-basis: 688px;
+            }
+
+            @media (min-width: 1280px) {
+                flex-basis: 100px;
+                flex-direction: column;
+            }
+        }
+
+        &-item-title {
+            @include font(15px ,29px ,700);
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 15px;
+
+            &::before {
+                display: block;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $accent-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: -36px;
+
+                @media (min-width: 1280px) {
+                    width: 16px;
+                    height: 16px;
+                    top: -43px;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__subject-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 280px;
+
+        @media (min-width: 768px) {
+            flex-basis: 688px;
+        }
+        
+        @media (min-width: 1280px) {
+            flex-basis: 100px;
+        }
+
+        &-item {
+            flex-basis: 152px;
+            margin-bottom: 12px;
+        }
+
+        &-item:not(:last-child) {
+            @media (min-width: 768px) {
+                margin-right: 26px;
+            }
+        }
+
+        &-item-title {
+            @include font(13px ,29px ,800);
+            padding-left: 38px;
+            color: $accent-color;
+            margin-bottom: 13px;
+            position: relative;
+
+            &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                background-color: rgb(255, 107, 8);
+                width: 25px;
+                height: 2px;
+                left: 0;
+                top: 14px;
+            }
+        }
+
+        &-item-description {
+            @include font(11px ,20px ,400);
+            color: $third-text-color;
+        }
+    }
+}
+
+.advantage {
+    position: absolute;
+    top: -645px;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    margin-bottom: 45px;
+
+    @media (min-width: 768px) {
+        top: -480px;
+    }
+
+    @media (min-width: 1280px) {
+        top: -580px;
+    }
+
+    &__title {
+        color: $secondary-text-color;
+        font-family: $main-font;
+        @include font(20px ,32px ,800);
+        margin-bottom: 20px;
+        width: 137px;
+
+        @media (min-width: 768px) {
+            width: 688px;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 26px;
+        }
+
+        @media (min-width: 1280px) {
+            width: 1210px;
+            font-size: 42px;
+            line-height: 56px;
+        }
+    }
+
+    &__list {
+        width: 280px;
+        background-color: #fff;
+        padding-left: 28px;
+        padding-bottom: 24px;
+
+        @media (min-width: 768px) {
+            width: 688px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width: 1280px) {
+            width: 1210px;
+            justify-content: space-around;
+            padding-bottom: 50px;
+        }
+    }
+    
+    &__list-item {
+        
+        &:nth-child(2n - 1) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                margin-right: 72px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            flex-basis: 200px;
+        }
+
+        @media (min-width: 1280px) {
+            flex-basis: 296px;
+        }
+    }
+
+    &__list-item-title {
+        @include font(14px ,29px ,700);
+        padding-left: 38px;
+        color: $accent-color;
+        padding-top: 16px;
+        position: relative;
+
+        @media (min-width: 1280px) {
+            font-size: 20px;
+            padding-top: 50px;
+            margin-bottom: 18px;
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            background-color: rgb(255, 107, 8);
+            width: 25px;
+            height: 2px;
+            left: 0;
+            top: 29px;
+
+            @media (min-width: 1280px) {
+                top: 63px;
+            }
+        }
+    }
+
+    &__list-item-description {
+        font-family: $main-font;
+        @include font(13px ,29px ,700);
+        color: $main-text-color;
+
+        @media (min-width: 1280px) {
+            font-size: 18px;
+        }
+    }
+}
