@@ -21,6 +21,12 @@
         background-image: url(../../images/bgi_programm_tablet.jpg);
         background-position-y: 840px;
     }
+
+    @media (min-width: 1280px) {
+        background-image: url(../../images/bgi_programm_desctop.jpg);
+        background-position-y: 480px;
+        background-position-x: left;
+    }
 }
 
 .line {
@@ -30,11 +36,19 @@
     width: 2px;
     height: 1324px;
     background-color: #546264;
+    overflow: hidden;
     
     @media (min-width: 768px) {
         left: calc(50% - 232px);
         top: 162px;
         height: 742px;
+    }
+
+    @media (min-width: 1280px) {
+        left: 0;
+        top: 160px;
+        height: 2px;
+        width: 100%;
     }
 }
 
@@ -44,6 +58,11 @@
 
     @media (min-width: 768px) {
         padding-bottom: 356px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-bottom: 497px;
+        margin-bottom: 92px;
     }
 
     &__title {
@@ -60,6 +79,11 @@
             text-align: left;
             margin-bottom: 36px;
         }
+
+        @media (min-width: 1280px) {
+            font-size: 42px;
+            margin-bottom: 84px;
+        }
     }
 
     &__semester-list {
@@ -73,6 +97,10 @@
             padding-left: 144px;
         }
 
+        @media (min-width: 1280px) {
+            padding-left: 0;
+        }
+
         &-item {
             display: flex;
             flex-basis: 280px;
@@ -81,6 +109,11 @@
 
             @media (min-width: 768px) {
                 flex-basis: 688px;
+            }
+
+            @media (min-width: 1280px) {
+                flex-basis: 100px;
+                flex-direction: column;
             }
         }
 
@@ -101,6 +134,13 @@
                 position: absolute;
                 top: 10px;
                 left: -36px;
+
+                @media (min-width: 1280px) {
+                    width: 16px;
+                    height: 16px;
+                    top: -43px;
+                    left: 0;
+                }
             }
         }
     }
@@ -112,6 +152,10 @@
 
         @media (min-width: 768px) {
             flex-basis: 688px;
+        }
+        
+        @media (min-width: 1280px) {
+            flex-basis: 100px;
         }
 
         &-item {
@@ -161,6 +205,10 @@
         top: 1186px;
     }
 
+    @media (min-width: 1280px) {
+        top: 656px;
+    }
+
     &__title {
         color: $secondary-text-color;
         font-family: $main-font;
@@ -173,6 +221,12 @@
             text-align: center;
             font-size: 26px;
             margin-bottom: 26px;
+        }
+
+        @media (min-width: 1280px) {
+            width: 1210px;
+            font-size: 42px;
+            line-height: 56px;
         }
     }
 
@@ -188,18 +242,28 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
+        @media (min-width: 1280px) {
+            width: 1210px;
+            justify-content: space-around;
+            padding-bottom: 50px;
+        }
     }
     
     &__list-item {
         
         &:nth-child(2n - 1) {
-            @media (min-width: 768px) {
+            @media (min-width: 768px) and (max-width: 1279px) {
                 margin-right: 72px;
             }
         }
 
         @media (min-width: 768px) {
             flex-basis: 200px;
+        }
+
+        @media (min-width: 1280px) {
+            flex-basis: 296px;
         }
     }
 
@@ -210,6 +274,12 @@
         padding-top: 16px;
         position: relative;
 
+        @media (min-width: 1280px) {
+            font-size: 20px;
+            padding-top: 50px;
+            margin-bottom: 18px;
+        }
+
         &::before {
             display: block;
             position: absolute;
@@ -219,6 +289,10 @@
             height: 2px;
             left: 0;
             top: 29px;
+
+            @media (min-width: 1280px) {
+                top: 63px;
+            }
         }
     }
 
@@ -226,5 +300,9 @@
         font-family: $main-font;
         @include font(13px ,29px ,700);
         color: $main-text-color;
+
+        @media (min-width: 1280px) {
+            font-size: 18px;
+        }
     }
 }
