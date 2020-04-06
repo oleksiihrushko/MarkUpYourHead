@@ -21,27 +21,6 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: 576px) {
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
-
   .slider__control {
     position: absolute;
     top: 0;
@@ -136,10 +115,10 @@
     color: $main-text-color;
   }
 
-.slider__content_link{
+  .slider__content_link{
     color: $accent-color;
     text-decoration: underline;
-}
+  }
 
   .slider__content_footer {
     background: #f5f5f5;
@@ -148,21 +127,11 @@
     color: #616161;
   }
 
-  .slider__content_avatar {
-    flex: 0 0 40px;
-    max-width: 40px;
-  }
-
   .slider__content_photo {
     display: block;
     height: auto;
     max-width: 100%;
     border-radius: 50%;
-  }
-
-  .slider__content_author {
-    margin-left: 8px;
-    line-height: 40px;
   }
 
   .slider__indicators {
@@ -186,7 +155,6 @@
     width: 56px;
     height: 56px;
     cursor: pointer;
-    background-image: url(../images/photo2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,11 +167,62 @@
   .slider__indicators li.active {
     opacity: 1;
     border: 1px solid $accent-color;
-    
   }
 
-  @media (max-width:768px){
-    .slider__indicators:first-child{
-        display: none;
+  .slider__indicators > li:nth-child(1){
+    background-image: url(../images/photo.png);
+  }
+
+  .slider__indicators > li:nth-child(2){
+    background-image: url(../images/photo2.png);
+  }
+
+  .slider__indicators > li:nth-child(3){
+    background-image: url(../images/photo3.png);
+  }
+
+  .slider__indicators > li:nth-child(4){
+    background-image: url(../images/photo4.png);
+  }
+
+  .slider__indicators > li:nth-child(5){
+    background-image: url(../images/photo5.png);
+  }
+
+  .slider__indicators > li:nth-child(6){
+    background-image: url(../images/photo6.png);
+  }
+
+  .slider__indicators > li:nth-child(7){
+    background-image: url(../images/photo7.png);
+  }
+
+  .slider__indicators > li:nth-child(n+4){
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .slider__indicators > li:nth-child(n+4){
+        display: block;
+      }
+
+  }
+
+  @media (min-width: 1280px) {
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 1680px) {
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
