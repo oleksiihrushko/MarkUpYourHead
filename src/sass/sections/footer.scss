@@ -138,7 +138,7 @@
   .contact__list-link-instagram {
     margin-left: 60px;
 
-    ::before {
+    &::before {
       display: block;
       content: '';
       width: 1px;
@@ -161,7 +161,7 @@
     @include font(27px, 37px, 600);
     letter-spacing: 1.35px;
 
-    ::before {
+    &::before {
       width: 32px;
       height: 32px;
       top: 5px;
