@@ -79,13 +79,16 @@
   color: $accent-color;
 }
 
+.contact__form-wrapper {
+  background-color: #111517;  
+  height: 72px;
+}
+
 .contact__from-description {
   @include font(11px, 72px, 500);
   letter-spacing: 0.55px;
   color: #fdfefe;
-  background-color: rgb(17, 21, 23);
   text-align: center;
-  height: 72px;
 }
 
 @media (min-width: 768px) {
@@ -148,7 +151,6 @@
   }
 
   .contact__from-description {
-    padding-left: 40px;
     text-align: left;
   }
 }
