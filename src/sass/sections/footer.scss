@@ -4,59 +4,82 @@
   padding-top: 28px;
   margin: 0 auto;
   text-align: center;
-}
 
-.contact__list {
-  margin-bottom: 21px;
-}
+  &__list {
+    margin-bottom: 21px;
 
-.contact__content-list-link {
-  display: block;
-  position: relative;
-  @include font(18px, 37px, 600);
-  letter-spacing: 0.9px;
-  text-decoration: none;
-  color: #111517;
-  margin-bottom: 21px;
-}
+    &-link-instagram {
+      display: block;
+      margin: 0 auto;
+      width: 37px;
+      height: 37px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../images/icons/instagram.png);
+    }
+  }
 
-.contact__content-list-link::before {
-  background-image: url(../images/icons/icon_tel.png);
-  content: "";
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  display: block;
-  top: 10px;
-  left: 15px;
-}
+  &__content-list-link {
+    display: block;
+    position: relative;
+    @include font(18px, 37px, 600);
+    letter-spacing: 0.9px;
+    text-decoration: none;
+    color: #111517;
+    margin-bottom: 21px;
 
-.contact__list-link-instagram {
-  display: block;
-  margin: 0 auto;
-  width: 37px;
-  height: 37px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/icons/instagram.png);
-}
+    &::before {
+      background-image: url(../images/icons/icon_tel.png);
+      content: '';
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      display: block;
+      top: 10px;
+      left: 15px;
+    }
+  }
 
-.contact__logo-text-1 {
-  @include font(15px, 22px, 800);
-  letter-spacing: 0.75px;
-  display: inline-block;
-  text-transform: capitalize;
-}
+  &__logo-text-1 {
+    @include font(15px, 22px, 800);
+    letter-spacing: 0.75px;
+    display: inline-block;
+    text-transform: capitalize;
+  }
 
-.contact__logo-text-2 {
-  @include font(15px, 22px, 800);
-  letter-spacing: 0.75px;
-  display: inline-block;
-  text-transform: uppercase;
+  &__logo-text-2 {
+    @include font(15px, 22px, 800);
+    letter-spacing: 0.75px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  &__logo-text {
+    @include font(5px, 12px, 700);
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+
+  &__orange-text {
+    color: $accent-color;
+  }
+
+  &__form-wrapper {
+    background-color: #111517;
+    height: 72px;
+  }
+
+  &__from-description {
+    @include font(11px, 72px, 500);
+    letter-spacing: 0.55px;
+    color: #fdfefe;
+    text-align: center;
+  }
 }
 
 .svg_fire {
@@ -64,29 +87,6 @@
   height: 22px;
   transform: translate(3px, 9px);
   fill: $accent-color;
-}
-
-.contact__logo-text {
-  @include font(5px, 12px, 700);
-  letter-spacing: 0.65px;
-  text-transform: uppercase;
-  padding-bottom: 15px;
-}
-
-.contact__orange-text {
-  color: $accent-color;
-}
-
-.contact__form-wrapper {
-  background-color: #111517;
-  height: 72px;
-}
-
-.contact__from-description {
-  @include font(11px, 72px, 500);
-  letter-spacing: 0.55px;
-  color: #fdfefe;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -107,11 +107,11 @@
     margin: 0;
     @include font(20px, 37px, 600);
     letter-spacing: 1px;
-  }
 
-  .contact__content-list-link::before {
-    top: 10px;
-    left: -26px;
+    &::before {
+      top: 10px;
+      left: -26px;
+    }
   }
 
   .contact__logo-text-1 {
@@ -137,17 +137,16 @@
 
   .contact__list-link-instagram {
     margin-left: 60px;
-  }
 
-  .contact__list-link-instagram::before {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 29px;
-    background-color: #e0e0e0;
-    transform: translate(-30px, 5px);
+    ::before {
+      display: block;
+      content: '';
+      width: 1px;
+      height: 29px;
+      background-color: #e0e0e0;
+      transform: translate(-30px, 5px);
+    }
   }
-
   .contact__from-description {
     text-align: left;
   }
@@ -161,13 +160,13 @@
   .contact__content-list-link {
     @include font(27px, 37px, 600);
     letter-spacing: 1.35px;
-  }
 
-  .contact__content-list-link::before {
-    width: 32px;
-    height: 32px;
-    top: 5px;
-    left: -37px;
+    ::before {
+      width: 32px;
+      height: 32px;
+      top: 5px;
+      left: -37px;
+    }
   }
 
   .contact__from-description {
