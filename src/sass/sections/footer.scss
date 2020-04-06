@@ -49,7 +49,6 @@
   @include font(15px, 22px, 800);
   letter-spacing: 0.75px;
   display: inline-block;
-  padding-right: 4px;
   text-transform: capitalize;
 }
 
@@ -57,15 +56,14 @@
   @include font(15px, 22px, 800);
   letter-spacing: 0.75px;
   display: inline-block;
-  padding-left: 4px;
   text-transform: uppercase;
 }
 
-.img_fire {
-  display: inline-block;
+.svg_fire {
   width: 15px;
   height: 22px;
-  transform: translateY(4px);
+  transform: translate(3px, 9px);
+  fill: $accent-color;
 }
 
 .contact__logo-text {
@@ -80,7 +78,7 @@
 }
 
 .contact__form-wrapper {
-  background-color: #111517;  
+  background-color: #111517;
   height: 72px;
 }
 
@@ -126,10 +124,10 @@
     letter-spacing: 1.25px;
   }
 
-  .img_fire {
+  .svg_fire {
     width: 21px;
     height: 30px;
-    transform: translateY(4px);
+    transform: translate(3px, 9px);
   }
 
   .contact__logo-text {
@@ -181,10 +179,5 @@
 @media (min-width: 1680px) {
   .contact__list {
     padding-right: 442px;
-  }
-
-
-  .contact__from-description {
-    padding-left: 182px;
   }
 }
