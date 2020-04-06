@@ -14,6 +14,10 @@
     overflow: hidden; 
 }
 
+.teacher_info{
+    margin-bottom: 40px;
+}
+
 .teacher_info--name{
     @include font(16px,30px,900);
     background-color: #fefefe;
@@ -36,14 +40,43 @@
 
 .teacher_info_list--text::before{
     content: '';
-    display: inline-block;
-    width: 40px;
-    height: 30px;
-    background-image: url(../images/icons/check.png);
+    display:block;
+    width: 30px;
+    height: 20px;
+    float: left;
+    background-image: url(../images/icons/icon-check.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-right: 10px;
+}
+
+.teacher_info_achievments::after{
+    content: '';
+    background-color: rgb(255, 107, 8);
+    width: 25px;
+    height: 2px;
+    position: absolute;
+}
+
+.teacher_info_achievments{
+    @include font(13px,16px,900);
+}
+
+.teacher_info_text{
+    padding-top: 20px;
+    @include font(11px,19px,400);
+    color: rgb(133, 133, 133);
+}
+
+.teacher_info_text--item{
+    margin-bottom: 20px;
+}
+
+.teacher_info_text--link{
+    color: rgb(255, 107, 8);
+    text-decoration: underline;
 }
 
 
-
+  
