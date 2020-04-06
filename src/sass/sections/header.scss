@@ -15,6 +15,28 @@ cursor: pointer;
 .header-position-menu{
 
 }
+.header-link-logo{
+
+}
+.nav-burger-menu-ul{
+	margin-bottom: 50px;
+}
+.header-link-burger{
+		margin: 0 auto;
+    	text-transform: uppercase;
+    	font-size: 11px;
+    	font-weight: 700;
+    	color:$accent-color;
+    	border-width: 2px;
+		border-color: rgb(255, 107, 8);
+		border-style: solid;
+		width: 247px;
+		height: 45px;
+		display: flex;
+		letter-spacing: 1px;
+		justify-content: center;
+		align-items: center;
+}
 .logo_svg{
 	height: 30px;
 	width: 30px;
@@ -28,11 +50,10 @@ cursor: pointer;
 }
 .logo_svg-second-part{
 	display: block;
-	font-weight: 700;
+	font-weight: 700;	
 	text-transform: uppercase;
 	font-size: 7.6px;
 	color: black;
-	text-align: center;
 }
 .logo_svg-second-part-first-word{
 	color: $accent-color;
@@ -142,6 +163,52 @@ header{
 .header__ul{
 	display: none;
 }
+.burder-close-icon{
+	height: 23px;
+	width: 23px;
+	fill: white;
+	transform: translateY(8px);
+}
+.flex-burger-menu-logo{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-top: 35px;
+	margin-bottom: 45px;
+}
+.logo_svg-first-part-burger{
+	color: white;
+	font-weight: 700;
+	font-size: 20px;
+}
+.logo_svg-second-part-burger{
+	color: white;
+	font-weight: 700;	
+}
+.nav-burger-menu-ul-li a{
+	 color: white;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    
+}
+.nav-burger-menu-ul-li{
+	margin-bottom: 15px;
+}
+.nav-burger-menu-ul-li a:hover{
+	color: $accent-color;
+}
+.bd-modal-burger{
+	position: fixed;
+	left: 0; 
+	top: 0; 
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.8); 
+	display: none;
+
+}
+
 @media (min-width: 768px) {
     .header-link{
     	display: inline;
@@ -179,6 +246,15 @@ header{
     	font-size: 25px;
     	width: 300px;
     }
+    .nav-burger-menu-ul{
+    	width: 300px;
+    	margin:0 auto;
+    	margin-bottom: 40px;
+    }
+    .nav-burger-menu-ul-li a{
+    	font-size: 25px;
+    }
+   
  	header{
  		background-image: url('../images/mobile-img/header-bg-down768.png');
  		background-repeat: no-repeat;
