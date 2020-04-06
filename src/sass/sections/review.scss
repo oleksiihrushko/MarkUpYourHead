@@ -219,6 +219,7 @@
   }
 
   @media (min-width: 768px) {
+
         .review_title{
         font-family:$main-font;
         @include font(26px, 62px, 900);
@@ -265,19 +266,63 @@
             top: -10%;
           }
 
-
     }
 
   @media (min-width: 1280px) {
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
+    .review_title{
+        font-family:$main-font;
+        @include font(42px, 62px, 800);
+        padding-top: 46px;
+        margin-bottom: 18px;
+        }
+    
+        .slider__content_header{
+            flex-basis: 20%;
+        }
+
+        .slider__content_info{
+            flex-basis: 75%;
+            text-align: left;
+        }
+
+        .slider__indicators li {
+            margin-right: 20px;
+        }
+
+        .slider__control {
+            top: -30%;
+          }
+
+        .slider__content_title {
+            font-family:$main-font;
+            @include font(26px, 32px, 800);
+            color:$accent-color;
+            margin-bottom: 14px;
+        }
+        
+        .slider__content_university{
+            font-family:$main-font;
+            @include font(12px, 20px, 400);
+            color: rgb(133, 133, 133);
+            margin-bottom: 12px;
+        }
+          
+        .slider__content_text{
+            font-family:$main-font;
+            @include font(16px, 26px, 600);
+            color: $main-text-color;
+        }
+
+        .slider__content_img {
+            display: block;
+            width: 146px;
+            height: 146px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+          }
+        
   }
 
-  @media (min-width: 1680px) {
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
+  
+
