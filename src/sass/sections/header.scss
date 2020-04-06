@@ -1,0 +1,274 @@
+.logo{
+	height: 30px;
+	width: 80px;
+}
+.header__list-item-btn{
+    background-color: black;
+    width: 25px;
+    height: 2px;
+    display: block;
+    margin-bottom: 2px;	
+}
+.header__burder-menu{
+cursor: pointer;
+}
+.header-position-menu{
+
+}
+.logo_svg{
+	height: 30px;
+	width: 30px;
+	transform: translateY(8px);
+	fill: $accent-color;
+}
+.logo_svg-first-part{
+	font-size: 15px;
+	font-weight: 800;
+	color: black;
+}
+.logo_svg-second-part{
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 7.6px;
+	color: black;
+	text-align: center;
+}
+.logo_svg-second-part-first-word{
+	color: $accent-color;
+}
+.header-icon-position{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header-link{
+	display: none;
+}
+.header-top-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-top: 38px;
+	margin-bottom: 60px;
+}
+.header__h1{
+	font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;	
+    line-height: 29px;
+    margin-bottom: 40px;
+}
+.header__p{
+	color: rgba(0,0,0, 0.3);
+	font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+.header__p-span{
+	display: block;
+	color: black;
+	font-weight: 700;
+}
+.header__p-span-span{
+	color: $accent-color;
+	font-weight: 700;
+}
+.header__a{
+	display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 250px;
+    font-size: 11px;
+    line-height: 48px;
+    color: white;
+    height: 48px;
+    margin:0 auto;
+    border-width: 2px;
+    border-color: #ff6b08;
+    border-style: solid;
+    background-color: #ff6b08;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+.icon-wrapper-img{
+	
+}
+.icon-female_student{
+	width: 30px;
+	height: 36px;
+	fill: $accent-color;
+	transform: translateY(5px);	
+}
+.icon-mobile_learning{
+	height: 34px;
+	width: 34px;
+	fill: $accent-color;
+	transform: translate(-3px, 9px);
+}
+.icon-wrapper{
+  border-width: 1.5px;
+  border-color: rgb(255, 107, 8);
+  border-style: solid;
+  padding: 7px 13px 7px 13px;
+  margin-right: 20px; 
+}
+.header__main-icon-wrapper{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 25px;
+	width: 200px;
+}
+.icon-description{
+    line-height: 20px;
+    width: 170px;
+    font-family: $main-font;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.50px;
+}
+header{
+	background-image: url('../images/mobile-img/header-bg-down.png');
+	background-position: bottom 100px;
+	
+}
+.header-main-img{
+	margin-bottom: 92px;
+}
+.header-link-logo{
+}
+
+.header__ul{
+	display: none;
+}
+@media (min-width: 768px) {
+    .header-link{
+    	display: inline;
+    	margin-right:70px;
+    	text-transform: uppercase;
+    	font-size: 11px;
+    	font-weight: 700;
+    	color:$accent-color;
+    	border-width: 1.5px;
+		border-color: rgb(255, 107, 8);
+		border-style: solid;
+		width: 247px;
+		height: 45px;
+		display: flex;
+		letter-spacing: 1px;
+		justify-content: center;
+		align-items: center;
+    }
+    .header__burder-menu{
+    	display: flex;
+    	align-items: center;
+    }
+    .header__block-list{
+    	display: flex;
+    	justify-content: space-between;
+    	margin-bottom: 130px;
+    }
+    .icon-description{
+    	width: 140px;
+    }
+    .header__a{
+    	margin:0;
+    }
+    .header__h1{
+    	font-size: 25px;
+    	width: 300px;
+    }
+ 	header{
+ 		background-image: url('../images/mobile-img/header-bg-down768.png');
+ 		background-repeat: no-repeat;
+
+ 	}
+ 	.header-icon-position{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 	}
+	.header__ul{
+		display: none;
+	}
+	.logo_svg-first-part{
+	font-size: 25px;
+	}
+	.logo_svg-second-part{
+	font-size: 10.5px;
+	}
+  }
+
+@media (min-width: 1280px){
+	.header__burder-menu-span{
+		display: none;
+	}
+	.header-link{
+		    margin-right: 0px;
+    		width: 300px;
+    		height: 68px;
+    		font-size: 12px;
+	}
+
+	.header__ul{
+		display: flex;
+		width: 600px;
+		margin-right: 44px;
+		justify-content: space-between;
+	}
+	.header__ul-li > a{
+		text-transform: uppercase;
+		color: $third-text-color;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.header__h1{
+		font-size: 48px;
+		width: 500px;
+		line-height: 58px;
+	}
+	.header__p{
+		font-size: 18px;
+	}
+	header{
+ 		background-image: url('../images/mobile-img/header-bg-down1280.png');
+ 		background-repeat: no-repeat;
+
+ 	}
+ 	.header-icon-position{
+ 		justify-content: space-around;
+ 	}
+ 	.icon-wrapper{
+	  border-width: 1.3px;
+	  border-color: rgb(255, 107, 8);
+	  border-style: solid;
+	  padding: 10px 16px 10px 16px;
+	  margin-right: 0px; 
+}
+.icon-female_student{
+	width: 39px;
+	height: 45px;
+}
+.icon-mobile_learning{
+	height: 44px;
+	width: 45px;
+		
+}
+.header__main-icon-wrapper{
+	width: 400px;
+	align-items: center;
+}
+.icon-description{
+    width: 210px;
+    background-color: white;
+    height: 40px;
+    letter-spacing: 0.50px;
+    transform: translateX(-10px);
+}
+.header__ul a:hover{
+color: $accent-color;
+}
+}
+
+
