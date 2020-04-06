@@ -16,6 +16,11 @@
     background-position-x: right;
     background-position-y: 1520px;
     background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        background-image: url(../../images/bgi_programm_tablet.jpg);
+        background-position-y: 840px;
+    }
 }
 
 .line {
@@ -25,11 +30,21 @@
     width: 2px;
     height: 1324px;
     background-color: #546264;
+    
+    @media (min-width: 768px) {
+        left: calc(50% - 232px);
+        top: 162px;
+        height: 742px;
+    }
 }
 
 .programm {
     padding-bottom: 412px;
     margin-bottom: 245px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 356px;
+    }
 
     &__title {
         color: $secondary-text-color;
@@ -38,6 +53,13 @@
         padding-top: 50px;
         text-align: center;
         margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            line-height: 62px;
+            font-size: 26px;
+            text-align: left;
+            margin-bottom: 36px;
+        }
     }
 
     &__semester-list {
@@ -47,11 +69,19 @@
         padding-left: 94px;;
         margin-bottom: 5px;
 
+        @media (min-width: 768px) {
+            padding-left: 144px;
+        }
+
         &-item {
             display: flex;
             flex-basis: 280px;
             flex-wrap: wrap;
             margin-bottom: 12px;
+
+            @media (min-width: 768px) {
+                flex-basis: 688px;
+            }
         }
 
         &-item-title {
@@ -80,9 +110,19 @@
         flex-wrap: wrap;
         flex-basis: 280px;
 
+        @media (min-width: 768px) {
+            flex-basis: 688px;
+        }
+
         &-item {
-            flex-basis: 280px;
+            flex-basis: 152px;
             margin-bottom: 12px;
+        }
+
+        &-item:not(:last-child) {
+            @media (min-width: 768px) {
+                margin-right: 26px;
+            }
         }
 
         &-item-title {
@@ -117,11 +157,23 @@
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     margin-bottom: 45px;
 
+    @media (min-width: 768px) {
+        top: 1186px;
+    }
+
     &__title {
         color: $secondary-text-color;
         font-family: $main-font;
         @include font(20px ,32px ,800);
         margin-bottom: 20px;
+        width: 137px;
+
+        @media (min-width: 768px) {
+            width: 688px;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
@@ -129,6 +181,26 @@
         background-color: #fff;
         padding-left: 28px;
         padding-bottom: 24px;
+
+        @media (min-width: 768px) {
+            width: 688px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    &__list-item {
+        
+        &:nth-child(2n - 1) {
+            @media (min-width: 768px) {
+                margin-right: 72px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            flex-basis: 200px;
+        }
     }
 
     &__list-item-title {
@@ -136,7 +208,6 @@
         padding-left: 38px;
         color: $accent-color;
         padding-top: 16px;
-        margin-bottom: 13px;
         position: relative;
 
         &::before {
