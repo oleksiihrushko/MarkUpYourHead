@@ -4,7 +4,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: rgb(17, 21, 23);
-  background-image: url("/images/registration_bgrnd_mobile.png");
+  background-image: url('/images/registration_bgrnd_mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -16,6 +16,64 @@
     color: $secondary-text-color;
     text-align: center;
     padding: 0 22px 22px;
+
+    &--small {
+      @include font(11px, 20px, 600);
+      letter-spacing: 0.55px;
+      padding: 0 13px 28px;
+    }
+  }
+
+  &__form-input {
+    border-width: 1px;
+    color: $secondary-text-color;
+    border-style: solid;
+    width: 278px;
+    height: 48px;
+    background: none;
+    padding: 22px;
+
+    &--tell {
+      margin-bottom: 56px;
+    }
+
+    &--name {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form-input:focus {
+    outline-offset: -1px;
+  }
+
+  &__form-input:required:focus:valid:not(:placeholder-shown) {
+    outline: 1px solid green;
+  }
+
+  &__form-input:required:focus:invalid:not(:placeholder-shown) {
+    outline: 1px solid red;
+  }
+
+  &__form-input::placeholder {
+    text-transform: capitalize;
+    color: $secondary-text-color;
+    @include font(13px, 37px, 600);
+    letter-spacing: 0.65px;
+  }
+
+  &__form-btn {
+    border-width: 2px;
+    border-color: $accent-color;
+    border-style: solid;
+    background-color: $accent-color;
+    width: 246px;
+    height: 44px;
+    text-transform: uppercase;
+    @include font(11px, 42px, 700);
+    letter-spacing: 0.9px;
+    font-family: $main-font;
+    cursor: pointer;
+    color: $secondary-text-color;
   }
 }
 
@@ -23,178 +81,111 @@
   color: $accent-color;
 }
 
-.small {
-  @include font(11px, 20px, 600);
-  letter-spacing: 0.55px;
-  padding: 0 13px 28px;
-}
-
 .form-wrapper {
   text-align: center;
 }
 
-.registration__form-input {
-  border-width: 1px;
-  color: $secondary-text-color;
-  border-style: solid;
-  width: 278px;
-  height: 48px;
-  background: none;
-}
-
-input:not([type="submit"]) {
-  padding: 22px;
-  color: $secondary-text-color;
-}
-
-.tell {
-  margin-top: 20px;
-  margin-bottom: 56px;
-}
-
-input::placeholder {
-  text-transform: capitalize;
-  color: $secondary-text-color;
-  @include font(13px, 37px, 600);
-  letter-spacing: 0.65px;
-}
-
-.registration__form-input:focus {
-  outline-offset: -1px;
-}
-
-.registration__form-input:required:focus:valid:not(:placeholder-shown) {
-  outline: 1px solid green;
-}
-
-.registration__form-input:required:focus:invalid:not(:placeholder-shown) {
-  outline: 1px solid red;
-}
-
-.registration__form-btn {
-  border-width: 2px;
-  border-color: $accent-color;
-  border-style: solid;
-  background-color: $accent-color;
-  width: 246px;
-  height: 44px;
-  text-transform: uppercase;
-  @include font(11px, 42px, 700);
-  letter-spacing: 0.9px;
-  font-family: $main-font;
-  cursor: pointer;
-  color: $secondary-text-color;
-}
-
 @media (min-width: 768px) {
-  
   .registration {
     padding-top: 61px;
-    background-image: url("/images/registration_bgrnd_tablet.png");
+    background-image: url('/images/registration_bgrnd_tablet.png');
 
     &__text {
       @include font(22px, 38px, 800);
       letter-spacing: 1.1px;
       padding: 0 71px 32px;
+
+      &--small {
+        @include font(15px, 20px, 600);
+        letter-spacing: 0.75px;
+        padding: 0 96px 42px;
+      }
     }
-  }
 
-  .small {
-    @include font(15px, 20px, 600);
-    letter-spacing: 0.75px;
-    padding: 0 104px 42px;
-  }
+    &__form-input {
+      width: 398px;
+      height: 48px;
+    }
 
-  .registration__form-input {
-    width: 398px;
-    height: 48px;
-  }
-
-  .tell {
-    margin-top: 20px;
-    margin-bottom: 56px;
-  }
-
-  .registration__form-btn {
-    width: 246px;
-    height: 44px;
-    @include font(11px, 42px, 700);
-    letter-spacing: 1.43px;
+    &__form-btn {
+      width: 246px;
+      height: 44px;
+      @include font(11px, 42px, 700);
+      letter-spacing: 1.43px;
+    }
   }
 }
 
 @media (min-width: 1280px) {
-  
   .registration {
     padding-top: 86px;
-    background-image: url("/images/registration_bgrnd_desktop_1280.png");
+    background-image: url('/images/registration_bgrnd_desktop_1280.png');
 
     &__text {
       @include font(37px, 50px, 800);
       letter-spacing: 1.87px;
       padding: 0 141px 51px;
+
+      &--small {
+        @include font(18px, 24px, 600);
+        letter-spacing: 0.9px;
+        padding: 0 308px 53px;
+      }
     }
-  }
 
-  .small {
-    @include font(18px, 24px, 600);
-    letter-spacing: 0.9px;
-    padding: 0 333px 53px;
-  }
+    &__form-input {
+      width: 618px;
+      height: 70px;
 
-  .registration__form-input {
-    width: 618px;
-    height: 70px;
-  }
+      &--tell {
+        margin-bottom: 59px;
+      }
 
-  .tell {
-    margin-top: 32px;
-    margin-bottom: 59px;
-  }
+      &--name {
+        margin-bottom: 32px;
+      }
+    }
 
-  input::placeholder {
-    @include font(20px, 37px, 600);
-    letter-spacing: 1.04px;
-  }
+    &__form-input::placeholder {
+      @include font(20px, 37px, 600);
+      letter-spacing: 1.04px;
+    }
 
-  .registration__form-btn {
-    width: 350px;
-    height: 68px;
-    @include font(14px, 42px, 700);
-    letter-spacing: 2.8px;
+    &__form-btn {
+      width: 350px;
+      height: 68px;
+      @include font(14px, 42px, 700);
+      letter-spacing: 2.8px;
+    }
   }
 }
 
 @media (min-width: 1680px) {
-  
-    .registration {
+  .registration {
     padding-top: 134px;
-    background-image: url("/images/registration_bgrnd_desktop_1680.png");
+    background-image: url('/images/registration_bgrnd_desktop_1680.png');
 
     &__text {
       @include font(37px, 50px, 800);
       letter-spacing: 1.87px;
       padding: 0 176px 75px;
+
+      &--small {
+        @include font(25px, 37px, 600);
+        letter-spacing: 1.25px;
+        padding: 0 258px 53px;
+      }
     }
-  }
 
-  .small {
-    @include font(25px, 37px, 600);
-    letter-spacing: 1.25px;
-    padding: 0 258px 53px;
-  }
+    &__form-input {
+      width: 618px;
+      height: 70px;
+      display: block;
+      margin: 28px auto;
+    }
 
-  .registration__form-input {
-    width: 618px;
-    height: 70px;
-  }
-
-  .form-wrapper input {
-    display: block;
-    margin: 28px auto;
-  }
-
-  .registration__form-btn {
-    margin-top: 57px;
+    &__form-btn {
+      margin-top: 57px;
+    }
   }
 }
