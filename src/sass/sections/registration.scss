@@ -64,9 +64,7 @@
   }
 
   &__form-btn {
-    border-width: 2px;
-    border-color: $accent-color;
-    border-style: solid;
+    border: 0;
     background-color: $accent-color;
     width: 246px;
     height: 44px;
@@ -112,8 +110,6 @@
     }
 
     &__form-btn {
-      width: 246px;
-      height: 44px;
       @include font(11px, 42px, 700);
       letter-spacing: 1.43px;
     }
