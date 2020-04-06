@@ -1,0 +1,159 @@
+.position {
+    position: relative;
+}
+
+.new-line {
+    display: block;
+}
+
+.visually-hidden {
+    opacity: 0;
+}
+
+.programm-bg {
+    background-color: $main-bgrnd-color;
+    background-image: url(../../images/bgi_programm.png);
+    background-position-x: right;
+    background-position-y: 1520px;
+    background-repeat: no-repeat;
+}
+
+.line {
+    position: absolute;
+    top: 124px;
+    left: calc(50% - 78px);
+    width: 2px;
+    height: 1324px;
+    background-color: #546264;
+}
+
+.programm {
+    padding-bottom: 412px;
+    margin-bottom: 245px;
+
+    &__title {
+        color: $secondary-text-color;
+        font-family: $main-font;
+        @include font(20px ,32px ,800);
+        padding-top: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__semester-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 94px;;
+        margin-bottom: 5px;
+
+        &-item {
+            display: flex;
+            flex-basis: 280px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        &-item-title {
+            @include font(15px ,29px ,700);
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 15px;
+
+            &::before {
+                display: block;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $accent-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: -36px;
+            }
+        }
+    }
+
+    &__subject-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 280px;
+
+        &-item {
+            flex-basis: 280px;
+            margin-bottom: 12px;
+        }
+
+        &-item-title {
+            @include font(13px ,29px ,800);
+            padding-left: 38px;
+            color: $accent-color;
+            margin-bottom: 13px;
+            position: relative;
+
+            &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                background-color: rgb(255, 107, 8);
+                width: 25px;
+                height: 2px;
+                left: 0;
+                top: 14px;
+            }
+        }
+
+        &-item-description {
+            @include font(11px ,20px ,400);
+            color: $third-text-color;
+        }
+    }
+}
+
+.advantage {
+    position: absolute;
+    top: 1592px;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    margin-bottom: 45px;
+
+    &__title {
+        color: $secondary-text-color;
+        font-family: $main-font;
+        @include font(20px ,32px ,800);
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        width: 280px;
+        background-color: #fff;
+        padding-left: 28px;
+        padding-bottom: 24px;
+    }
+
+    &__list-item-title {
+        @include font(14px ,29px ,700);
+        padding-left: 38px;
+        color: $accent-color;
+        padding-top: 16px;
+        margin-bottom: 13px;
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            background-color: rgb(255, 107, 8);
+            width: 25px;
+            height: 2px;
+            left: 0;
+            top: 29px;
+        }
+    }
+
+    &__list-item-description {
+        font-family: $main-font;
+        @include font(13px ,29px ,700);
+        color: $main-text-color;
+    }
+}
