@@ -197,16 +197,16 @@
 
 .advantage {
     position: absolute;
-    top: 1592px;
+    top: -645px;
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     margin-bottom: 45px;
 
     @media (min-width: 768px) {
-        top: 1186px;
+        top: -480px;
     }
 
     @media (min-width: 1280px) {
-        top: 656px;
+        top: -580px;
     }
 
     &__title {
