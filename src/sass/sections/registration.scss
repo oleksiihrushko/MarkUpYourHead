@@ -15,12 +15,14 @@
     font-style: normal;
     color: $secondary-text-color;
     text-align: center;
-    padding: 0 22px 22px;
+    padding: 0 22px;
+    margin-bottom: 22px;
 
     &--small {
       @include font(11px, 20px, 600);
       letter-spacing: 0.55px;
-      padding: 0 13px 28px;
+      padding: 0 13px;
+      margin-bottom: 28px;
     }
   }
 
@@ -93,12 +95,14 @@
     &__text {
       @include font(22px, 38px, 800);
       letter-spacing: 1.1px;
-      padding: 0 71px 32px;
+      padding: 0 71px;
+      margin-bottom: 32px;
 
       &--small {
         @include font(15px, 20px, 600);
         letter-spacing: 0.75px;
-        padding: 0 96px 42px;
+        padding: 0 96px;
+        margin-bottom: 42px;
       }
     }
 
@@ -124,12 +128,14 @@
     &__text {
       @include font(37px, 50px, 800);
       letter-spacing: 1.87px;
-      padding: 0 141px 51px;
+      padding: 0 141px;
+      margin-bottom: 51px;
 
       &--small {
         @include font(18px, 24px, 600);
         letter-spacing: 0.9px;
-        padding: 0 308px 53px;
+        padding: 0 308px;
+        margin-bottom: 53px;
       }
     }
 
@@ -168,12 +174,14 @@
     &__text {
       @include font(37px, 50px, 800);
       letter-spacing: 1.87px;
-      padding: 0 176px 75px;
+      padding: 0 176px;
+      margin-bottom: 75px;
 
       &--small {
         @include font(25px, 37px, 600);
         letter-spacing: 1.25px;
-        padding: 0 258px 53px;
+        padding: 0 258px;
+        margin-bottom: 53px;
       }
     }
 
