@@ -22,7 +22,7 @@
     @include font(16px,30px,900);
     background-color: #fefefe;
     padding-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .teacher_info--name::after{
@@ -32,6 +32,7 @@
     background-color: $third-text-color;
     width: 100%;
     height: 1px; 
+    margin-top: 10px;
 }
 
 .teacher_info_list--topic{
@@ -40,7 +41,7 @@
 
 .teacher_info_list--text::before{
     content: '';
-    display:block;
+    display: block;
     width: 30px;
     height: 20px;
     float: left;
@@ -49,6 +50,7 @@
     background-position: center;
     background-size: cover;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .teacher_info_achievments::after{
@@ -78,5 +80,59 @@
     text-decoration: underline;
 }
 
+@media (min-width:768px){
+    .teacher_box{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .teacher_info--name{
+        padding-top: 0;
+    }
+
+    .teacher_card_photo{
+        width: 246px;
+        height: 322px;
+        margin-right: 40px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .teacher_card--title{
+        @include font(42px,62px,900);
+        margin-bottom: 30px;
+    }
+
+    .teacher_info--name{
+        @include font(30px,30px,900);
+        background-color: #fefefe;
+        margin-bottom: 40px;
+    }
+
+    .teacher_info_achievments{
+        @include font(16px,28px,700);
+        margin-bottom: 30px;
+    }
+
+    .teacher_info_text{
+        padding-top: 40px;
+        @include font(18px, 32px, 400);
+        margin-bottom: 30px;
+    }
+    
+
+    .teacher_card_photo{
+        width: 492px;
+        height: 646px;
+        margin-right: 40px;
+    }
+
+  }
+
+  @media (min-width: 1700px) {
+
+
+  }
 
   
