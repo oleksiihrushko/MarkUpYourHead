@@ -9,7 +9,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
-  &_list--item {
+  &__box {
+    padding-left: 6px;
+  }
+
+  &__item {
     border-width: 1px;
     border-color: $accent-color;
     border-style: none;
@@ -17,40 +21,40 @@
     padding-left: 26px;
     position: relative;
     padding-bottom: 20px;
-  }
 
-  &_list--item:last-of-type {
-    border-style: none;
-    padding-bottom: 0;
-  }
+    &:last-of-type {
+      border-style: none;
+      padding-bottom: 0;
+    }
 
-  &_list--marked::after {
-    content: '*';
-    color: $accent-color;
-  }
+    &--marked::after {
+      content: '*';
+      color: $accent-color;
+    }
 
-  &_list--box::before {
-    display: block;
-    content: '';
-    position: absolute;
-    background-image: url(../images/icons/fire.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-color: $secondary-bgrnd-color;
-    left: 0;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-  }
+    &--box::before {
+      display: block;
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/fire.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: $secondary-bgrnd-color;
+      left: 0;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+    }
 
-  &_list--text {
-    @include font(12px, 22px, 600);
-    font-family: $main-font;
-  }
+    &--text {
+      @include font(12px, 22px, 600);
+      font-family: $main-font;
+    }
 
-  &_list--subtext {
-    color: $accent-color;
+    &--subtext {
+      color: $accent-color;
+    }
   }
 }
 
@@ -62,8 +66,14 @@
   .guarantee_info {
     padding-top: 40px;
     padding-bottom: 40px;
+    background-color: $secondary-text-color;
 
-    &_list--box::before {
+    &__box {
+      padding: 35px 40px 32px 68px;
+      background-color: $secondary-bgrnd-color;
+    }
+
+    &__item--box::before {
       width: 25px;
       height: 25px;
     }
@@ -80,20 +90,24 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
-    &_list--text {
+    &__box {
+      padding: 48px 110px 46px 114px;
+    }
+
+    &__item--text {
       @include font(18px, 30px, 600);
       font-family: $main-font;
     }
 
-    &_list--marked {
+    &__item--marked {
       display: block;
     }
 
-    &_list--subtext {
+    &__item--subtext {
       display: block;
     }
 
-    &_list--box::before {
+    &__item--box::before {
       width: 26px;
       height: 26px;
     }
@@ -110,20 +124,24 @@
     padding-top: 30px;
     padding-bottom: 30px;
 
-    &_list--text {
+    &__box {
+      padding: 60px 140px 44px 92px;
+    }
+
+    &__item--text {
       @include font(22px, 30px, 600);
       font-family: $main-font;
     }
 
-    &_list--marked {
+    &__item--marked {
       display: block;
     }
 
-    &_list--subtext {
+    &__item--subtext {
       display: block;
     }
 
-    &_list--box::before {
+    &__item--box::before {
       width: 32px;
       height: 32px;
     }
