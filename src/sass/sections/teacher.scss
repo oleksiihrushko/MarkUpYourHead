@@ -99,9 +99,15 @@
     height: 322px;
     margin-right: 40px;
   }
+
+  .teacher__card--title {
+    @include font(26px, 62px, 900);
+    margin-bottom: 30px;
+  }
+  
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .teacher__card--title {
     @include font(42px, 62px, 900);
     margin-bottom: 30px;
