@@ -35,6 +35,9 @@
       font-size: 11px;
       font-weight: 700;
       color: $accent-color;
+      border-width: 1.5px;
+      border-color: $accent-color;
+      border-style: solid;
       width: 247px;
       height: 45px;
       display: flex;
@@ -111,14 +114,14 @@
 .logo_svg-first-part {
   font-size: 15px;
   font-weight: 800;
-  color: black;
+  color: #000000;
 }
 .logo_svg-second-part {
   display: block;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 7.6px;
-  color: black;
+  color: #000000;
 }
 
 .logo_svg-second-part-first-word {
@@ -268,10 +271,6 @@
     }
   }
 
-  .icon-description {
-    width: 140px;
-  }
-
   .nav-burger-menu__ul {
     width: 300px;
     margin: 0 auto;
@@ -284,20 +283,6 @@
 
   .icon-description {
     width: 140px;
-  }
-
-  .header-icon-position {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .logo_svg-first-part {
-    font-size: 25px;
-  }
-
-  .logo_svg-second-part {
-    font-size: 10.5px;
   }
 
   .header-icon-position {
@@ -370,14 +355,17 @@
   }
 
   .icon-wrapper {
+    width: 70px;
+    height: 70px;
     border-width: 1.3px;
     border-color: $accent-color;
     border-style: solid;
-    padding: 10px 16px 10px 16px;
+    padding: 10px 16px;
     margin-right: 0px;
   }
 
-  .icon-female_student {
+  .icon-female_student,
+  .icon-insurance {
     width: 39px;
     height: 45px;
   }
@@ -385,6 +373,7 @@
   .icon-mobile_learning {
     height: 44px;
     width: 45px;
+    transform: translate(-7px, 8px);
   }
 
   .icon-description {
@@ -393,5 +382,12 @@
     height: 40px;
     letter-spacing: 0.5px;
     transform: translateX(-10px);
+  }
+}
+
+@media (min-width: 1680px) {
+  .icon-mobile_learning {
+    height: 44px;
+    width: 45px;
   }
 }
