@@ -1,7 +1,7 @@
 let burgerbtn = document.querySelector('.header__burder-menu-span'),
   closebtn = document.querySelector('.burder-close-icon'),
   burgertoggle = document.querySelector('.bd-modal-burger'),
-  headermenu = document.querySelector('.header-top-menu');
+  headermenu = document.querySelector('.header__top-menu');
 
 burgerbtn.onclick = function () {
   burgertoggle.style.display = 'block';

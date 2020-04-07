@@ -90,7 +90,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    width: 200px;
+    width: 220px;
   }
 
   &__block-list {
@@ -131,7 +131,8 @@
   align-items: center;
 }
 
-.icon-female_student {
+.icon-female_student,
+.icon-insurance {
   width: 30px;
   height: 36px;
   fill: $accent-color;
@@ -144,6 +145,8 @@
   transform: translate(-3px, 9px);
 }
 .icon-wrapper {
+  height: 60px;
+  width: 60px;
   border-width: 1.5px;
   border-color: $accent-color;
   border-style: solid;
