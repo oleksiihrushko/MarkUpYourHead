@@ -60,6 +60,8 @@
     width: 100%;
     padding: 30px 22px 0;
 
+    transition: all 0.5s linear;
+
     @media (max-width: 767px) {
       height: 267px;
 
@@ -99,6 +101,7 @@
       fill: $accent-color;
       width: 45px;
       height: 45px;
+      transition: all 0.5s linear;
 
       @media (min-width: 1280px) {
         margin-bottom: 14px;
@@ -118,6 +121,7 @@
 
       letter-spacing: 0.65px;
       margin-bottom: 16px;
+      transition: all 0.5s linear;
 
       @media (min-width: 1280px) {
         @include font(18px, 29px, 700);
@@ -139,6 +143,7 @@
         content: '';
         margin: 0 auto;
         margin-top: 20px;
+        transition: all 0.5s linear;
       }
     }
 
@@ -147,6 +152,7 @@
 
       letter-spacing: 0.55px;
       color: $third-text-color;
+      transition: all 0.5s linear;
 
       @media (min-width: 1280px) {
         @include font(15px, 31px, 400);

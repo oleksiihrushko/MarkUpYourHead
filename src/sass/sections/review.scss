@@ -44,7 +44,7 @@
 
     &:hover,
     &:focus {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       outline: 0;
     }
@@ -114,7 +114,7 @@
     &_university {
       font-family: $main-font;
       @include font(12px, 20px, 400);
-      color: rgb(133, 133, 133);
+      color: #858585;
       margin-bottom: 12px;
     }
 
@@ -299,7 +299,7 @@
   .slider__content_university {
     font-family: $main-font;
     @include font(12px, 20px, 400);
-    color: rgb(133, 133, 133);
+    color: #858585;
     margin-bottom: 12px;
   }
 
