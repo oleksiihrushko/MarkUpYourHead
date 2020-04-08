@@ -6,22 +6,34 @@
   @media (min-width: 768px) {
     height: 333px;
     padding-top: 66px;
-    background-image: url(../images/fire_bgrnd.png);
+    background-image: url(../images/fire_bgrnd.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/fire_bgrnd@2x.jpg);
+    }
   }
 
   @media (min-width: 1280px) {
     padding-top: 78px;
     height: 525px;
-    background-image: url(../images/fire_bgrnd_1280.png);
+    background-image: url(../images/fire_bgrnd_1280.jpg);
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/fire_bgrnd_1280@2x.jpg);
+    }
   }
 
   @media (min-width: 1680px) {
     padding-top: 120px;
     height: 560px;
-    background-image: url(../images/fire_bgrnd_1680.png);
+    background-image: url(../images/fire_bgrnd_1680.jpg);
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/fire_bgrnd_1680@2x.jpg);
+    }
   }
 
   &__title {
