@@ -39,7 +39,7 @@
     width: 30px;
     color: #fff;
     text-align: center;
-    bottom: 15%;
+    bottom: 13%;
     background-color: inherit;
 
     &:hover,
@@ -92,6 +92,9 @@
       border-radius: 50%;
       margin: 0 auto;
       margin-bottom: 20px;
+      object-fit: cover;
+      object-position: bottom;
+
     }
 
     &_image::after {
