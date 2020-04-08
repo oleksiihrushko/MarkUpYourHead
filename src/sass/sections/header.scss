@@ -210,6 +210,7 @@
 
 .bd-modal-burger {
   position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -218,7 +219,15 @@
   display: none;
 }
 
+.display{
+  display: none;
+}
 @media (min-width: 768px) {
+    .registration__form-style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .header {
     background-image: url('../images/mobile-img/header-bg-down768.png');
     background-repeat: no-repeat;
@@ -242,7 +251,7 @@
       align-items: center;
     }
 
-    &__link-burger {
+    &__link--burger {
       display: none;
     }
 
@@ -301,6 +310,7 @@
 }
 
 @media (min-width: 1280px) {
+
   .header {
     background-image: url('../images/mobile-img/header-bg-down1280.png');
     background-repeat: no-repeat;
@@ -315,7 +325,6 @@
       height: 68px;
       font-size: 12px;
     }
-
     &__ul {
       display: flex;
       width: 600px;
