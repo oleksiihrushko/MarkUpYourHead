@@ -26,6 +26,10 @@
     }
   }
 
+  @media (min-resolution: 192dpi) {
+    background-image: url('/images/registration_bgrnd_mobile@2x.png');
+  }
+
   &__form-input {
     border-width: 1px;
     color: $secondary-text-color;
@@ -90,6 +94,10 @@
     padding-top: 61px;
     background-image: url('/images/registration_bgrnd_tablet.png');
 
+    @media (min-resolution: 192dpi) {
+      background-image: url('/images/registration_bgrnd_tablet@2x.png');
+    }
+
     &__text {
       @include font(22px, 38px, 800);
       letter-spacing: 1.1px;
@@ -120,6 +128,10 @@
   .registration {
     padding-top: 86px;
     background-image: url('/images/registration_bgrnd_desktop_1280.png');
+
+    @media (min-resolution: 192dpi) {
+      background-image: url('/images/registration_bgrnd_desktop_1280@2x.png');
+    }
 
     &__text {
       @include font(37px, 50px, 800);
@@ -166,6 +178,10 @@
   .registration {
     padding-top: 134px;
     background-image: url('/images/registration_bgrnd_desktop_1680.png');
+
+    @media (min-resolution: 192dpi) {
+      background-image: url('/images/registration_bgrnd_desktop_1680@2x.png');
+    }
 
     &__text {
       @include font(37px, 50px, 800);
