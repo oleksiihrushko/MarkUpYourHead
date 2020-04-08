@@ -13,19 +13,31 @@
 .programm-bg {
     background-color: $main-bgrnd-color;
     background-image: url(../../images/bgi_programm.png);
+    background-size: 143px;
     background-position-x: right;
     background-position-y: 1520px;
     background-repeat: no-repeat;
+    @media (min-resolution: 192dpi) {
+        background-image: url(../../images/bgi_programm@2x.jpg);
+    }
 
     @media (min-width: 768px) {
         background-image: url(../../images/bgi_programm_tablet.jpg);
+        background-size: 405px;
         background-position-y: 840px;
+        @media (min-resolution: 192dpi) {
+            background-image: url(../../images/bgi_programm_tablet@2x.jpg);
+        }
     }
 
     @media (min-width: 1280px) {
         background-image: url(../../images/bgi_programm_desctop.jpg);
+        background-size: 545px;
         background-position-y: 480px;
         background-position-x: left;
+        @media (min-resolution: 192dpi) {
+            background-image: url(../../images/bgi_programm_desctop@2x.jpg);
+        }
     }
 }
 
