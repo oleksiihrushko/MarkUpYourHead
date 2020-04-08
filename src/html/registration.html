@@ -14,9 +14,9 @@
     <div class="form-wrapper">
       <form action="#" class="registration__form">
         <input name="name" type="text" class="registration__form-input registration__form-input--name"
-          placeholder="имя*" required minlength="2">
+          placeholder="имя*" required minlength="2" pattern="[A-Za-zА-Яа-яЁё]{2,}">
         <input name="phone" type="tel" class="registration__form-input registration__form-input--tell"
-          placeholder="телефон*" required>
+          placeholder="телефон*" required pattern="[0-9]{10}">
 
         <div class="registration__form-btn-wrapper">
           <button type="submit" class="registration__form-btn">хочу на бесплатное занятие</button>
