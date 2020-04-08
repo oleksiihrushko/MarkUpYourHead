@@ -21,4 +21,15 @@ if (isset($_POST['btn'])) {
 		echo "<a href='index.html'>Вернуться на сайт</a>";
 	}
 }
+
+server {
+	listen 80;
+	server_name localhost;
+	location / {
+	root html;
+	index index.html index.htm;
+	}
+	error_page 405 =200 $uri;
+	# ...
+	}
 ?>
