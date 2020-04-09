@@ -13,14 +13,6 @@ if (isset($_POST['btn'])) {
 
 	
 
-	$success = mail($to, $subject, $message, $headers);
-	if (!$success) {
-	    $errorMessage = error_get_last()['message'];
-	}else{
-		echo "Спасибо за заказ $name".'<br>';
-		echo "Мы вам перезвоним в течение 10 минут"."<br>";
-		echo "<a href='index.html'>Вернуться на сайт</a>";
-	}
-}
+	mail($to, $subject, $message, $headers);
 echo 1;
 ?>
