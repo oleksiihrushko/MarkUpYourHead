@@ -78,9 +78,9 @@
   &__content {
     max-width: 100%;
     box-shadow: 4px 6px 12px 12px rgba(29, 29, 27, 0.09);
-    padding-bottom: 30px;
+    padding: 0 15px 30px;
 
-    &_header{
+    &_header {
       padding-top: 20px;
     }
 
@@ -97,7 +97,6 @@
       margin-bottom: 20px;
       object-fit: cover;
       object-position: bottom;
-
     }
 
     &_image::after {
@@ -334,29 +333,28 @@
   .slider__indicators > li:nth-child(1) {
     background-image: url(../images/photo@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(2) {
     background-image: url(../images/photo2@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(3) {
     background-image: url(../images/photo3@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(4) {
     background-image: url(../images/photo4@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(5) {
     background-image: url(../images/photo5@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(6) {
     background-image: url(../images/photo6@2x.png);
   }
-  
+
   .slider__indicators > li:nth-child(7) {
     background-image: url(../images/photo7@2x.png);
   }
 }
-
