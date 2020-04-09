@@ -6,6 +6,7 @@ if (isset($_POST['btn'])) {
 	$to      = 'reintdenis@gmail.com';
 	$subject = 'Перезвонить';
 	$message = 'Номер телефона - ' . $phone;
+	$message = 'Имя - ' . $name;
 	$headers = 'From: webmaster@example.com' . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
@@ -21,15 +22,5 @@ if (isset($_POST['btn'])) {
 		echo "<a href='index.html'>Вернуться на сайт</a>";
 	}
 }
-
-server {
-	listen 80;
-	server_name localhost;
-	location / {
-	root html;
-	index index.html index.htm;
-	}
-	error_page 405 =200 $uri;
-	# ...
-	}
+echo 1;
 ?>
