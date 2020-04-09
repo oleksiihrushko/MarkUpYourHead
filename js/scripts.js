@@ -1,1 +1,448 @@
-"use strict";var burgerbtn=document.querySelector(".header__burder-menu-span"),closebtn=document.querySelector(".burder-close-icon"),burgertoggle=document.querySelector(".bd-modal-burger"),headermenu=document.querySelector(".header__top-menu"),btnlink=document.querySelector(".header__link--burger"),nav=document.querySelector(".nav"),display=document.querySelector(".display"),header__link=document.querySelector(".header__link"),registration__form=document.querySelector(".registration__form-btn");burgerbtn.onclick=function(){burgertoggle.style.display="block",headermenu.style.visibility="hidden"},closebtn.onclick=function(){burgertoggle.style.display="none",headermenu.style.visibility="visible",location.reload()},btnlink.onclick=function(){nav.style.display="none",btnlink.style.display="none",display.style.display="block"},header__link.onclick=function(){burgertoggle.style.display="block",headermenu.style.visibility="hidden",nav.style.display="none",display.style.display="block",btnlink.style.display="none"};var form=document.querySelector(".form");function ajaxPost(e){var t=new XMLHttpRequest;t.onreadystatechange=function(){4===t.readyState&&200===t.status&&(1==t.responseText?(document.querySelector("#result").innerHTML="Спасибо, мы вам перезвоним вам в течение 10 минут",document.querySelector("#result").style.color="green",document.querySelector("#result").style.fontSize="30px",registration__form.style.display="none",form.style.display="none"):(document.querySelector("#result").innerHTML="Заказ не прошел, повторите пожалуйста действия",document.querySelector("#result").style.color="red",document.querySelector("#result").style.fontSize="20px"))},t.open("POST","info.php"),t.send(e)}registration__form.onclick=function(){var e=new FormData(form);""===document.querySelector(".registration__form-input--name").value?alert("Введите свое имя"):""===document.querySelector(".registration__form-input--tell").value?alert("Введите свой телефон"):ajaxPost(e)};var multiItemSlider=function(e,t){var a,s=document.querySelector(e),u=s.querySelector(".slider__wrapper"),l=s.querySelectorAll(".slider__item"),d=(s.querySelectorAll(".slider__control"),s.querySelector(".slider__control_left"),s.querySelector(".slider__control_right"),parseFloat(getComputedStyle(u).width)),m=parseFloat(getComputedStyle(l[0]).width),n=s.innerHTML,y=0,f=l.length-1,g=0,p=0,v=m/d*100,h=[],c=0,_=[{active:!1,minWidth:0,count:1},{active:!1,minWidth:576,count:2},{active:!1,minWidth:992,count:3},{active:!1,minWidth:1200,count:4}],r={isCycling:!1,direction:"right",interval:5e3,pause:!0};for(var i in t)i in r&&(r[i]=t[i]);l.forEach(function(e,t){h.push({item:e,position:t,transform:0})});var S=function(){var r=0,i=parseFloat(document.body.clientWidth);_.forEach(function(e,t,n){_[t].active=!1,i>=_[t].minWidth&&(r=t)}),_[r].active=!0},b={getItemMin:function(){var n=0;return h.forEach(function(e,t){e.position<h[n].position&&(n=t)}),n},getItemMax:function(){var n=0;return h.forEach(function(e,t){e.position>h[n].position&&(n=t)}),n},getMin:function(){return h[b.getItemMin()].position},getMax:function(){return h[b.getItemMax()].position}},o=function(e){var t,n,r,i,o,l,c=y;r=(n=s).getBoundingClientRect(),i=window.innerWidth||doc.documentElement.clientWidth,o=window.innerHeight||doc.documentElement.clientHeight,l=function(e,t){return document.elementFromPoint(e,t)},r.right<0||r.bottom<0||r.left>i||r.top>o||!(n.contains(l(r.left,r.top))||n.contains(l(r.right,r.top))||n.contains(l(r.right,r.bottom))||n.contains(l(r.left,r.bottom)))||("right"===e&&(++g+d/m-1>b.getMax()&&(t=b.getItemMin(),h[t].position=b.getMax()+1,h[t].transform+=100*h.length,h[t].item.style.transform="translateX("+h[t].transform+"%)"),p-=v,f<(y+=1)&&(y=0)),"left"===e&&(--g<b.getMin()&&(t=b.getItemMax(),h[t].position=b.getMin()-1,h[t].transform-=100*h.length,h[t].item.style.transform="translateX("+h[t].transform+"%)"),p+=v,(y-=1)<0&&(y=f)),u.style.transform="translateX("+p+"%)",a[c].classList.remove("active"),a[y].classList.add("active"))},q=function(e){r.isCycling&&(c=setInterval(function(){o(e)},r.interval))},I=function(e){if(e.target.classList.contains("slider__control")){e.preventDefault();var t=e.target.classList.contains("slider__control_right")?"right":"left";o(t),clearInterval(c),q(r.direction)}e.target.getAttribute("data-slide-to")&&(e.preventDefault(),function(e){for(var t=0,n=y<e?"right":"left";e!==y&&t<=f;)o(n),t++}(parseInt(e.target.getAttribute("data-slide-to"))),clearInterval(c),q(r.direction))},k=function(){"hidden"===document.visibilityState?clearInterval(c):(clearInterval(c),q(r.direction))},M=function(){var e=document.createElement("ol");e.classList.add("slider__indicators");for(var t=0;t<l.length;t++){var n=document.createElement("li");0===t&&n.classList.add("active"),n.setAttribute("data-slide-to",t),e.appendChild(n)}s.appendChild(e),a=s.querySelectorAll(".slider__indicators > li")};return M(),s.addEventListener("click",I),r.pause&&r.isCycling&&(s.addEventListener("mouseenter",function(){clearInterval(c)}),s.addEventListener("mouseleave",function(){clearInterval(c),q(r.direction)})),document.addEventListener("visibilitychange",k,!1),window.addEventListener("resize",function(){var r,i=0,o=parseFloat(document.body.clientWidth);_.forEach(function(e,t,n){o>=_[t].minWidth&&(i=t)}),i!==(_.forEach(function(e,t,n){_[t].active&&(r=t)}),r)&&(S(),clearInterval(c),s.innerHTML=n,u=s.querySelector(".slider__wrapper"),l=s.querySelectorAll(".slider__item"),s.querySelectorAll(".slider__control"),s.querySelector(".slider__control_left"),s.querySelector(".slider__control_right"),d=parseFloat(getComputedStyle(u).width),m=parseFloat(getComputedStyle(l[0]).width),y=p=g=0,f=l.length-1,v=m/d*100,h=[],l.forEach(function(e,t){h.push({item:e,position:t,transform:0})}),M())}),"visible"===document.visibilityState&&q(r.direction),S(),{right:function(){o("right")},left:function(){o("left")},stop:function(){r.isCycling=!1,clearInterval(c)},cycle:function(){r.isCycling=!0,clearInterval(c),q()}}},slider=multiItemSlider(".slider",{isCycling:!0});
+'use strict';
+
+var burgerbtn = document.querySelector('.header__burder-menu-span'),
+  closebtn = document.querySelector('.burder-close-icon'),
+  burgertoggle = document.querySelector('.bd-modal-burger'),
+  headermenu = document.querySelector('.header__top-menu'),
+  btnlink = document.querySelector('.header__link--burger'),
+  nav = document.querySelector('.nav'),
+  display = document.querySelector('.display'),
+  header__link = document.querySelector('.header__link'),
+  registration__form = document.querySelector('.registration__form-btn');
+
+burgerbtn.onclick = function () {
+  burgertoggle.style.display = 'block';
+  headermenu.style.visibility = 'hidden';
+};
+
+closebtn.onclick = function () {
+  burgertoggle.style.display = 'none';
+  headermenu.style.visibility = 'visible';
+  location.reload();
+};
+
+btnlink.onclick = function () {
+  nav.style.display = 'none';
+  btnlink.style.display = 'none';
+  display.style.display = 'block';
+};
+
+header__link.onclick = function () {
+  burgertoggle.style.display = 'block';
+  headermenu.style.visibility = 'hidden';
+  nav.style.display = 'none';
+  display.style.display = 'block';
+  btnlink.style.display = 'none';
+};
+let form = document.querySelector('.form');
+registration__form.onclick = function () {
+  let formdata = new FormData(form);
+  if (document.querySelector('.registration__form-input--name').value === '') {
+    alert('Введите свое имя');
+  } else if (
+    document.querySelector('.registration__form-input--tell').value === ''
+  ) {
+    alert('Введите свой телефон');
+  } else {
+    ajaxPost(formdata);
+  }
+};
+function ajaxPost(params) {
+  let request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    if (request.readyState === 4 && request.status === 200) {
+      if (request.responseText == 1) {
+        document.querySelector('#result').innerHTML =
+          'Спасибо, мы вам перезвоним вам в течение 10 минут';
+        document.querySelector('#result').style.color = 'green';
+        document.querySelector('#result').style.fontSize = '30px';
+        registration__form.style.display = 'none';
+        form.style.display = 'none';
+      } else {
+        document.querySelector('#result').innerHTML =
+          'Заказ не прошел, повторите пожалуйста действия';
+        document.querySelector('#result').style.color = 'red';
+        document.querySelector('#result').style.fontSize = '20px';
+      }
+    }
+  };
+  request.open('POST', 'info.php');
+  request.send(params);
+}
+
+var multiItemSlider = (function () {
+  function _isElementVisible(element) {
+    var rect = element.getBoundingClientRect(),
+      vWidth = window.innerWidth || doc.documentElement.clientWidth,
+      vHeight = window.innerHeight || doc.documentElement.clientHeight,
+      elemFromPoint = function elemFromPoint(x, y) {
+        return document.elementFromPoint(x, y);
+      };
+
+    if (
+      rect.right < 0 ||
+      rect.bottom < 0 ||
+      rect.left > vWidth ||
+      rect.top > vHeight
+    )
+      return false;
+    return (
+      element.contains(elemFromPoint(rect.left, rect.top)) ||
+      element.contains(elemFromPoint(rect.right, rect.top)) ||
+      element.contains(elemFromPoint(rect.right, rect.bottom)) ||
+      element.contains(elemFromPoint(rect.left, rect.bottom))
+    );
+  }
+
+  return function (selector, config) {
+    var _mainElement = document.querySelector(selector),
+      _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
+      _sliderItems = _mainElement.querySelectorAll('.slider__item'),
+      _sliderControls = _mainElement.querySelectorAll('.slider__control'),
+      _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
+      _sliderControlRight = _mainElement.querySelector(
+        '.slider__control_right',
+      ),
+      _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
+      _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),
+      _html = _mainElement.innerHTML,
+      _indexIndicator = 0,
+      _maxIndexIndicator = _sliderItems.length - 1,
+      _indicatorItems,
+      _positionLeftItem = 0,
+      _transform = 0,
+      _step = (_itemWidth / _wrapperWidth) * 100,
+      _items = [],
+      _interval = 0,
+      _states = [
+        {
+          active: false,
+          minWidth: 0,
+          count: 1,
+        },
+        {
+          active: false,
+          minWidth: 576,
+          count: 2,
+        },
+        {
+          active: false,
+          minWidth: 992,
+          count: 3,
+        },
+        {
+          active: false,
+          minWidth: 1200,
+          count: 4,
+        },
+      ],
+      _config = {
+        isCycling: false,
+        direction: 'right',
+        interval: 5000,
+        pause: true,
+      };
+
+    for (var key in config) {
+      if (key in _config) {
+        _config[key] = config[key];
+      }
+    }
+
+    _sliderItems.forEach(function (item, index) {
+      _items.push({
+        item: item,
+        position: index,
+        transform: 0,
+      });
+    });
+
+    var _setActive = function _setActive() {
+      var _index = 0;
+      var width = parseFloat(document.body.clientWidth);
+
+      _states.forEach(function (item, index, arr) {
+        _states[index].active = false;
+        if (width >= _states[index].minWidth) _index = index;
+      });
+
+      _states[_index].active = true;
+    };
+
+    var _getActive = function _getActive() {
+      var _index;
+
+      _states.forEach(function (item, index, arr) {
+        if (_states[index].active) {
+          _index = index;
+        }
+      });
+
+      return _index;
+    };
+
+    var position = {
+      getItemMin: function getItemMin() {
+        var indexItem = 0;
+
+        _items.forEach(function (item, index) {
+          if (item.position < _items[indexItem].position) {
+            indexItem = index;
+          }
+        });
+
+        return indexItem;
+      },
+      getItemMax: function getItemMax() {
+        var indexItem = 0;
+
+        _items.forEach(function (item, index) {
+          if (item.position > _items[indexItem].position) {
+            indexItem = index;
+          }
+        });
+
+        return indexItem;
+      },
+      getMin: function getMin() {
+        return _items[position.getItemMin()].position;
+      },
+      getMax: function getMax() {
+        return _items[position.getItemMax()].position;
+      },
+    };
+
+    var _transformItem = function _transformItem(direction) {
+      var nextItem,
+        currentIndicator = _indexIndicator;
+
+      if (!_isElementVisible(_mainElement)) {
+        return;
+      }
+
+      if (direction === 'right') {
+        _positionLeftItem++;
+
+        if (
+          _positionLeftItem + _wrapperWidth / _itemWidth - 1 >
+          position.getMax()
+        ) {
+          nextItem = position.getItemMin();
+          _items[nextItem].position = position.getMax() + 1;
+          _items[nextItem].transform += _items.length * 100;
+          _items[nextItem].item.style.transform =
+            'translateX(' + _items[nextItem].transform + '%)';
+        }
+
+        _transform -= _step;
+        _indexIndicator = _indexIndicator + 1;
+
+        if (_indexIndicator > _maxIndexIndicator) {
+          _indexIndicator = 0;
+        }
+      }
+
+      if (direction === 'left') {
+        _positionLeftItem--;
+
+        if (_positionLeftItem < position.getMin()) {
+          nextItem = position.getItemMax();
+          _items[nextItem].position = position.getMin() - 1;
+          _items[nextItem].transform -= _items.length * 100;
+          _items[nextItem].item.style.transform =
+            'translateX(' + _items[nextItem].transform + '%)';
+        }
+
+        _transform += _step;
+        _indexIndicator = _indexIndicator - 1;
+
+        if (_indexIndicator < 0) {
+          _indexIndicator = _maxIndexIndicator;
+        }
+      }
+
+      _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+
+      _indicatorItems[currentIndicator].classList.remove('active');
+
+      _indicatorItems[_indexIndicator].classList.add('active');
+    };
+
+    var _slideTo = function _slideTo(to) {
+      var i = 0,
+        direction = to > _indexIndicator ? 'right' : 'left';
+
+      while (to !== _indexIndicator && i <= _maxIndexIndicator) {
+        _transformItem(direction);
+
+        i++;
+      }
+    };
+
+    var _cycle = function _cycle(direction) {
+      if (!_config.isCycling) {
+        return;
+      }
+
+      _interval = setInterval(function () {
+        _transformItem(direction);
+      }, _config.interval);
+    };
+
+    var _controlClick = function _controlClick(e) {
+      if (e.target.classList.contains('slider__control')) {
+        e.preventDefault();
+        var direction = e.target.classList.contains('slider__control_right')
+          ? 'right'
+          : 'left';
+
+        _transformItem(direction);
+
+        clearInterval(_interval);
+
+        _cycle(_config.direction);
+      }
+
+      if (e.target.getAttribute('data-slide-to')) {
+        e.preventDefault();
+
+        _slideTo(parseInt(e.target.getAttribute('data-slide-to')));
+
+        clearInterval(_interval);
+
+        _cycle(_config.direction);
+      }
+    };
+
+    var _handleVisibilityChange = function _handleVisibilityChange() {
+      if (document.visibilityState === 'hidden') {
+        clearInterval(_interval);
+      } else {
+        clearInterval(_interval);
+
+        _cycle(_config.direction);
+      }
+    };
+
+    var _refresh = function _refresh() {
+      clearInterval(_interval);
+      _mainElement.innerHTML = _html;
+      _sliderWrapper = _mainElement.querySelector('.slider__wrapper');
+      _sliderItems = _mainElement.querySelectorAll('.slider__item');
+      _sliderControls = _mainElement.querySelectorAll('.slider__control');
+      _sliderControlLeft = _mainElement.querySelector('.slider__control_left');
+      _sliderControlRight = _mainElement.querySelector(
+        '.slider__control_right',
+      );
+      _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width);
+      _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width);
+      _positionLeftItem = 0;
+      _transform = 0;
+      _indexIndicator = 0;
+      _maxIndexIndicator = _sliderItems.length - 1;
+      _step = (_itemWidth / _wrapperWidth) * 100;
+      _items = [];
+
+      _sliderItems.forEach(function (item, index) {
+        _items.push({
+          item: item,
+          position: index,
+          transform: 0,
+        });
+      });
+
+      _addIndicators();
+    };
+
+    var _setUpListeners = function _setUpListeners() {
+      _mainElement.addEventListener('click', _controlClick);
+
+      if (_config.pause && _config.isCycling) {
+        _mainElement.addEventListener('mouseenter', function () {
+          clearInterval(_interval);
+        });
+
+        _mainElement.addEventListener('mouseleave', function () {
+          clearInterval(_interval);
+
+          _cycle(_config.direction);
+        });
+      }
+
+      document.addEventListener(
+        'visibilitychange',
+        _handleVisibilityChange,
+        false,
+      );
+      window.addEventListener('resize', function () {
+        var _index = 0,
+          width = parseFloat(document.body.clientWidth);
+
+        _states.forEach(function (item, index, arr) {
+          if (width >= _states[index].minWidth) _index = index;
+        });
+
+        if (_index !== _getActive()) {
+          _setActive();
+
+          _refresh();
+        }
+      });
+    };
+
+    var _addIndicators = function _addIndicators() {
+      var sliderIndicators = document.createElement('ol');
+      sliderIndicators.classList.add('slider__indicators');
+
+      for (var i = 0; i < _sliderItems.length; i++) {
+        var sliderIndicatorsItem = document.createElement('li');
+
+        if (i === 0) {
+          sliderIndicatorsItem.classList.add('active');
+        }
+
+        sliderIndicatorsItem.setAttribute('data-slide-to', i);
+        sliderIndicators.appendChild(sliderIndicatorsItem);
+      }
+
+      _mainElement.appendChild(sliderIndicators);
+
+      _indicatorItems = _mainElement.querySelectorAll(
+        '.slider__indicators > li',
+      );
+    }; // добавляем индикаторы
+
+    _addIndicators(); // инициализация
+
+    _setUpListeners();
+
+    if (document.visibilityState === 'visible') {
+      _cycle(_config.direction);
+    }
+
+    _setActive();
+
+    return {
+      right: function right() {
+        _transformItem('right');
+      },
+      left: function left() {
+        _transformItem('left');
+      },
+      stop: function stop() {
+        _config.isCycling = false;
+        clearInterval(_interval);
+      },
+      cycle: function cycle() {
+        _config.isCycling = true;
+        clearInterval(_interval);
+
+        _cycle();
+      },
+    };
+  };
+})();
+
+var slider = multiItemSlider('.slider', {
+  isCycling: true,
+});
