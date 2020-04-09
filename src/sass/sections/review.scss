@@ -79,7 +79,10 @@
     max-width: 100%;
     box-shadow: 4px 6px 12px 12px rgba(29, 29, 27, 0.09);
     padding-bottom: 30px;
-  
+
+    &_header{
+      padding-top: 20px;
+    }
 
     &_image {
       position: relative;
