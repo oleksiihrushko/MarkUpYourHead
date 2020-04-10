@@ -1,6 +1,6 @@
 .teacher {
   font-family: $main-font;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 
   &__card--title {
     @include font(20px, 30px, 900);
@@ -123,7 +123,6 @@
   .teacher__info_text {
     padding-top: 40px;
     @include font(18px, 32px, 400);
-    margin-bottom: 30px;
   }
 
   .teacher__card--photo {

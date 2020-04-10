@@ -1,5 +1,5 @@
 .review {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   &__title {
     text-align: center;
@@ -227,7 +227,7 @@
 
 @media (min-width: 768px) {
   .review {
-    margin-bottom: 192px;
+    padding-bottom: 192px;
   }
   
   .review__title {
