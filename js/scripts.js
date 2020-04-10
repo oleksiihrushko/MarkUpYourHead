@@ -1,14 +1,14 @@
-'use strict';
+"use strict";
 
 var burgerbtn = document.querySelector('.header__burder-menu-span'),
-  closebtn = document.querySelector('.burder-close-icon'),
-  burgertoggle = document.querySelector('.bd-modal-burger'),
-  headermenu = document.querySelector('.header__top-menu'),
-  btnlink = document.querySelector('.header__link--burger'),
-  nav = document.querySelector('.nav'),
-  display = document.querySelector('.display'),
-  header__link = document.querySelector('.header__link'),
-  registration__form = document.querySelector('.registration__form-btn');
+    closebtn = document.querySelector('.burder-close-icon'),
+    burgertoggle = document.querySelector('.bd-modal-burger'),
+    headermenu = document.querySelector('.header__top-menu'),
+    btnlink = document.querySelector('.header__link--burger'),
+    nav = document.querySelector('.nav'),
+    display = document.querySelector('.display'),
+    header__link = document.querySelector('.header__link'),
+    registration__form = document.querySelector('.registration__form-btn');
 
 burgerbtn.onclick = function () {
   burgertoggle.style.display = 'block';
@@ -36,112 +36,95 @@ header__link.onclick = function () {
 };
 let form = document.querySelector('.form');
 registration__form.onclick = function () {
-  let formdata = new FormData(form);
+let formdata = new FormData(form);
   if (document.querySelector('.registration__form-input--name').value === '') {
-    alert('Введите свое имя');
-  } else if (
-    document.querySelector('.registration__form-input--tell').value === ''
-  ) {
-    alert('Введите свой телефон');
-  } else {
-    ajaxPost(formdata);
+  alert("Введите свое имя");
+  }
+  else if(document.querySelector('.registration__form-input--tell').value === '')  {
+      alert("Введите свой телефон");
+    }
+  else{
+   ajaxPost(formdata); 
   }
 };
-function ajaxPost(params) {
+function ajaxPost(params){
   let request = new XMLHttpRequest();
-  request.onreadystatechange = function () {
+  request.onreadystatechange = function(){
     if (request.readyState === 4 && request.status === 200) {
       if (request.responseText == 1) {
-        document.querySelector('#result').innerHTML =
-          'Спасибо, мы вам перезвоним вам в течение 10 минут';
+        document.querySelector('#result').innerHTML = "Спасибо, мы вам перезвоним вам в течение 10 минут";
         document.querySelector('#result').style.color = 'green';
         document.querySelector('#result').style.fontSize = '30px';
         registration__form.style.display = 'none';
         form.style.display = 'none';
-      } else {
-        document.querySelector('#result').innerHTML =
-          'Заказ не прошел, повторите пожалуйста действия';
-        document.querySelector('#result').style.color = 'red';
-        document.querySelector('#result').style.fontSize = '20px';
+      }else {
+        document.querySelector('#result').innerHTML = "Заказ не прошел, повторите пожалуйста действия";
+         document.querySelector('#result').style.color = 'red';
+         document.querySelector('#result').style.fontSize = '20px';
       }
+      
     }
-  };
+  }
   request.open('POST', 'info.php');
-  request.send(params);
+  request.send(params); 
 }
 
-var multiItemSlider = (function () {
+
+
+var multiItemSlider = function () {
   function _isElementVisible(element) {
     var rect = element.getBoundingClientRect(),
-      vWidth = window.innerWidth || doc.documentElement.clientWidth,
-      vHeight = window.innerHeight || doc.documentElement.clientHeight,
-      elemFromPoint = function elemFromPoint(x, y) {
-        return document.elementFromPoint(x, y);
-      };
+        vWidth = window.innerWidth || doc.documentElement.clientWidth,
+        vHeight = window.innerHeight || doc.documentElement.clientHeight,
+        elemFromPoint = function elemFromPoint(x, y) {
+      return document.elementFromPoint(x, y);
+    };
 
-    if (
-      rect.right < 0 ||
-      rect.bottom < 0 ||
-      rect.left > vWidth ||
-      rect.top > vHeight
-    )
-      return false;
-    return (
-      element.contains(elemFromPoint(rect.left, rect.top)) ||
-      element.contains(elemFromPoint(rect.right, rect.top)) ||
-      element.contains(elemFromPoint(rect.right, rect.bottom)) ||
-      element.contains(elemFromPoint(rect.left, rect.bottom))
-    );
+    if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) return false;
+    return element.contains(elemFromPoint(rect.left, rect.top)) || element.contains(elemFromPoint(rect.right, rect.top)) || element.contains(elemFromPoint(rect.right, rect.bottom)) || element.contains(elemFromPoint(rect.left, rect.bottom));
   }
 
   return function (selector, config) {
     var _mainElement = document.querySelector(selector),
-      _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
-      _sliderItems = _mainElement.querySelectorAll('.slider__item'),
-      _sliderControls = _mainElement.querySelectorAll('.slider__control'),
-      _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
-      _sliderControlRight = _mainElement.querySelector(
-        '.slider__control_right',
-      ),
-      _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
-      _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),
-      _html = _mainElement.innerHTML,
-      _indexIndicator = 0,
-      _maxIndexIndicator = _sliderItems.length - 1,
-      _indicatorItems,
-      _positionLeftItem = 0,
-      _transform = 0,
-      _step = (_itemWidth / _wrapperWidth) * 100,
-      _items = [],
-      _interval = 0,
-      _states = [
-        {
-          active: false,
-          minWidth: 0,
-          count: 1,
-        },
-        {
-          active: false,
-          minWidth: 576,
-          count: 2,
-        },
-        {
-          active: false,
-          minWidth: 992,
-          count: 3,
-        },
-        {
-          active: false,
-          minWidth: 1200,
-          count: 4,
-        },
-      ],
-      _config = {
-        isCycling: false,
-        direction: 'right',
-        interval: 5000,
-        pause: true,
-      };
+        _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
+        _sliderItems = _mainElement.querySelectorAll('.slider__item'),
+        _sliderControls = _mainElement.querySelectorAll('.slider__control'),
+        _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
+        _sliderControlRight = _mainElement.querySelector('.slider__control_right'),
+        _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
+        _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),
+        _html = _mainElement.innerHTML,
+        _indexIndicator = 0,
+        _maxIndexIndicator = _sliderItems.length - 1,
+        _indicatorItems,
+        _positionLeftItem = 0,
+        _transform = 0,
+        _step = _itemWidth / _wrapperWidth * 100,
+        _items = [],
+        _interval = 0,
+        _states = [{
+      active: false,
+      minWidth: 0,
+      count: 1
+    }, {
+      active: false,
+      minWidth: 576,
+      count: 2
+    }, {
+      active: false,
+      minWidth: 992,
+      count: 3
+    }, {
+      active: false,
+      minWidth: 1200,
+      count: 4
+    }],
+        _config = {
+      isCycling: false,
+      direction: 'right',
+      interval: 5000,
+      pause: true
+    };
 
     for (var key in config) {
       if (key in _config) {
@@ -153,7 +136,7 @@ var multiItemSlider = (function () {
       _items.push({
         item: item,
         position: index,
-        transform: 0,
+        transform: 0
       });
     });
 
@@ -209,12 +192,12 @@ var multiItemSlider = (function () {
       },
       getMax: function getMax() {
         return _items[position.getItemMax()].position;
-      },
+      }
     };
 
     var _transformItem = function _transformItem(direction) {
       var nextItem,
-        currentIndicator = _indexIndicator;
+          currentIndicator = _indexIndicator;
 
       if (!_isElementVisible(_mainElement)) {
         return;
@@ -223,15 +206,11 @@ var multiItemSlider = (function () {
       if (direction === 'right') {
         _positionLeftItem++;
 
-        if (
-          _positionLeftItem + _wrapperWidth / _itemWidth - 1 >
-          position.getMax()
-        ) {
+        if (_positionLeftItem + _wrapperWidth / _itemWidth - 1 > position.getMax()) {
           nextItem = position.getItemMin();
           _items[nextItem].position = position.getMax() + 1;
           _items[nextItem].transform += _items.length * 100;
-          _items[nextItem].item.style.transform =
-            'translateX(' + _items[nextItem].transform + '%)';
+          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
         }
 
         _transform -= _step;
@@ -249,8 +228,7 @@ var multiItemSlider = (function () {
           nextItem = position.getItemMax();
           _items[nextItem].position = position.getMin() - 1;
           _items[nextItem].transform -= _items.length * 100;
-          _items[nextItem].item.style.transform =
-            'translateX(' + _items[nextItem].transform + '%)';
+          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
         }
 
         _transform += _step;
@@ -270,7 +248,7 @@ var multiItemSlider = (function () {
 
     var _slideTo = function _slideTo(to) {
       var i = 0,
-        direction = to > _indexIndicator ? 'right' : 'left';
+          direction = to > _indexIndicator ? 'right' : 'left';
 
       while (to !== _indexIndicator && i <= _maxIndexIndicator) {
         _transformItem(direction);
@@ -292,9 +270,7 @@ var multiItemSlider = (function () {
     var _controlClick = function _controlClick(e) {
       if (e.target.classList.contains('slider__control')) {
         e.preventDefault();
-        var direction = e.target.classList.contains('slider__control_right')
-          ? 'right'
-          : 'left';
+        var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
 
         _transformItem(direction);
 
@@ -331,23 +307,21 @@ var multiItemSlider = (function () {
       _sliderItems = _mainElement.querySelectorAll('.slider__item');
       _sliderControls = _mainElement.querySelectorAll('.slider__control');
       _sliderControlLeft = _mainElement.querySelector('.slider__control_left');
-      _sliderControlRight = _mainElement.querySelector(
-        '.slider__control_right',
-      );
+      _sliderControlRight = _mainElement.querySelector('.slider__control_right');
       _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width);
       _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width);
       _positionLeftItem = 0;
       _transform = 0;
       _indexIndicator = 0;
       _maxIndexIndicator = _sliderItems.length - 1;
-      _step = (_itemWidth / _wrapperWidth) * 100;
+      _step = _itemWidth / _wrapperWidth * 100;
       _items = [];
 
       _sliderItems.forEach(function (item, index) {
         _items.push({
           item: item,
           position: index,
-          transform: 0,
+          transform: 0
         });
       });
 
@@ -369,14 +343,10 @@ var multiItemSlider = (function () {
         });
       }
 
-      document.addEventListener(
-        'visibilitychange',
-        _handleVisibilityChange,
-        false,
-      );
+      document.addEventListener('visibilitychange', _handleVisibilityChange, false);
       window.addEventListener('resize', function () {
         var _index = 0,
-          width = parseFloat(document.body.clientWidth);
+            width = parseFloat(document.body.clientWidth);
 
         _states.forEach(function (item, index, arr) {
           if (width >= _states[index].minWidth) _index = index;
@@ -407,12 +377,12 @@ var multiItemSlider = (function () {
 
       _mainElement.appendChild(sliderIndicators);
 
-      _indicatorItems = _mainElement.querySelectorAll(
-        '.slider__indicators > li',
-      );
+      _indicatorItems = _mainElement.querySelectorAll('.slider__indicators > li');
     }; // добавляем индикаторы
 
+
     _addIndicators(); // инициализация
+
 
     _setUpListeners();
 
@@ -438,11 +408,11 @@ var multiItemSlider = (function () {
         clearInterval(_interval);
 
         _cycle();
-      },
+      }
     };
   };
-})();
+}();
 
 var slider = multiItemSlider('.slider', {
-  isCycling: true,
+  isCycling: true
 });
