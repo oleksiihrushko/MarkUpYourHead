@@ -1,12 +1,11 @@
 .header {
   background-image: url('../images/mobile-img/header-bg-down.png');
-  padding-bottom: 40px;
+  padding: 38px 0 40px;
 
   &__top-menu {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 38px;
     margin-bottom: 60px;
   }
 
@@ -87,12 +86,12 @@
     background-color: $accent-color;
     font-weight: 700;
     margin-bottom: 36px;
+    animation-iteration-count: infinite;
   }
 
   &__main-icon-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
     width: 220px;
   }
 
@@ -219,11 +218,18 @@
   display: none;
 }
 
-.display{
+.display {
   display: none;
 }
+
+@media (max-width: 767px) {
+  .header__main-icon-wrapper {
+    margin-bottom: 25px;
+  }
+}
+
 @media (min-width: 768px) {
-    .registration__form-style{
+  .registration__form-style {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -310,7 +316,6 @@
 }
 
 @media (min-width: 1280px) {
-
   .header {
     background-image: url('../images/mobile-img/header-bg-down1280.png');
     background-repeat: no-repeat;
