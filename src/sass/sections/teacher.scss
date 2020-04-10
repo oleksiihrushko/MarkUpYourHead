@@ -1,5 +1,6 @@
 .teacher {
   font-family: $main-font;
+  margin-bottom: 30px;
 
   &__card--title {
     @include font(20px, 30px, 900);
@@ -13,7 +14,6 @@
   }
 
   &__info {
-    margin-bottom: 40px;
 
     &--name {
       @include font(16px, 30px, 900);
@@ -65,10 +65,6 @@
       padding-top: 20px;
       @include font(11px, 19px, 400);
       color: rgb(133, 133, 133);
-
-      &--item {
-        margin-bottom: 20px;
-      }
 
       &--link {
         color: $accent-color;
