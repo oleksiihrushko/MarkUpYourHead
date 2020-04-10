@@ -18,7 +18,6 @@ burgerbtn.onclick = function () {
 closebtn.onclick = function () {
   burgertoggle.style.display = 'none';
   headermenu.style.visibility = 'visible';
-  location.reload();
 };
 
 btnlink.onclick = function () {
